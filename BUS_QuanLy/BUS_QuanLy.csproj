@@ -44,6 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBillBUS.cs" />
     <Compile Include="RoomBUS.cs" />
+    <Compile Include="RoomDetailBUS.cs" />
     <Compile Include="RoomLeaseBUS.cs" />
     <Compile Include="RoomLeaseDetailBUS.cs" />
     <Compile Include="RoomReportBUS.cs" />

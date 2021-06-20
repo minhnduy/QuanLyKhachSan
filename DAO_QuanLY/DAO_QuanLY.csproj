@@ -45,6 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBillDAO.cs" />
     <Compile Include="RoomDAO.cs" />
+    <Compile Include="RoomDetailDAO.cs" />
     <Compile Include="RoomLeaseDAO.cs" />
     <Compile Include="RoomLeaseDetailDAO.cs" />
     <Compile Include="RoomReportDAO.cs" />

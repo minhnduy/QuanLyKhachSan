@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomForm));
             this.imgEditRoom = new DevExpress.XtraEditors.LabelControl();
             this.lbRoomHeader = new DevExpress.XtraEditors.LabelControl();
             this.lbRoomID = new DevExpress.XtraEditors.LabelControl();
@@ -41,8 +40,8 @@
             this.cbRoomType = new System.Windows.Forms.ComboBox();
             this.lbRoomPrice = new DevExpress.XtraEditors.LabelControl();
             this.tbRoomPrice = new System.Windows.Forms.TextBox();
-            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // imgEditRoom
@@ -50,15 +49,13 @@
             this.imgEditRoom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.imgEditRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            //this.imgEditRoom.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("imgEditRoom.Appearance.Image")));
             this.imgEditRoom.Appearance.Options.UseFont = true;
             this.imgEditRoom.Appearance.Options.UseImage = true;
-            //this.imgEditRoom.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("imgEditRoom.ImageOptions.Image")));
             this.imgEditRoom.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.imgEditRoom.Location = new System.Drawing.Point(49, 30);
             this.imgEditRoom.Margin = new System.Windows.Forms.Padding(2);
             this.imgEditRoom.Name = "imgEditRoom";
-            this.imgEditRoom.Size = new System.Drawing.Size(32, 32);
+            this.imgEditRoom.Size = new System.Drawing.Size(0, 13);
             this.imgEditRoom.TabIndex = 35;
             // 
             // lbRoomHeader
@@ -207,30 +204,36 @@
             this.tbRoomPrice.TabIndex = 47;
             this.tbRoomPrice.TabStop = false;
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            //this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
-            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnConfirm.Location = new System.Drawing.Point(126, 232);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(105, 41);
-            this.btnConfirm.TabIndex = 48;
-            this.btnConfirm.Text = "XÁC NHẬN";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            //this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x32;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCancel.Location = new System.Drawing.Point(259, 232);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnCancel.Size = new System.Drawing.Size(105, 41);
             this.btnCancel.TabIndex = 49;
             this.btnCancel.Text = "HỦY BỎ";
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirm.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirm.Appearance.Options.UseFont = true;
+            this.btnConfirm.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.apply_32x32;
+            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnConfirm.Location = new System.Drawing.Point(126, 232);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnConfirm.Size = new System.Drawing.Size(105, 41);
+            this.btnConfirm.TabIndex = 48;
+            this.btnConfirm.Text = "XÁC NHẬN";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // RoomForm
             // 

@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaxCustomerEditForm));
             this.lbMaxCustomers = new DevExpress.XtraEditors.LabelControl();
             this.nudMaxCustomers = new System.Windows.Forms.NumericUpDown();
-            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,35 +74,39 @@
             this.nudMaxCustomers.Enter += new System.EventHandler(this.NudMaxCustomers_Enter);
             this.nudMaxCustomers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NudMaxCustomers_KeyPress);
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirm.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.Appearance.Image")));
-            this.btnConfirm.Appearance.Options.UseImage = true;
-            this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
-            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnConfirm.Location = new System.Drawing.Point(116, 65);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(88, 39);
-            this.btnConfirm.TabIndex = 33;
-            this.btnConfirm.Text = "XÁC NHẬN";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Appearance.Image")));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.Appearance.Options.UseImage = true;
-            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x32;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancel.Location = new System.Drawing.Point(257, 65);
+            this.btnCancel.Location = new System.Drawing.Point(239, 65);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(88, 39);
+            this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnCancel.Size = new System.Drawing.Size(110, 35);
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "HỦY BỎ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirm.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirm.Appearance.Options.UseFont = true;
+            this.btnConfirm.Appearance.Options.UseImage = true;
+            this.btnConfirm.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.apply_32x32;
+            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnConfirm.Location = new System.Drawing.Point(98, 65);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnConfirm.Size = new System.Drawing.Size(110, 35);
+            this.btnConfirm.TabIndex = 33;
+            this.btnConfirm.Text = "XÁC NHẬN";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // MaxCustomerEditForm
             // 

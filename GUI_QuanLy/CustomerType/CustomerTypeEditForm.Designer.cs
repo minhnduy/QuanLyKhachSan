@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerTypeEditForm));
             this.imgAddRoomType = new DevExpress.XtraEditors.LabelControl();
             this.lbEditCustomerTypeHeader = new DevExpress.XtraEditors.LabelControl();
             this.lbOldCustomerType = new DevExpress.XtraEditors.LabelControl();
@@ -45,15 +44,13 @@
             // 
             this.imgAddRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.imgAddRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.imgAddRoomType.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("imgAddRoomType.Appearance.Image")));
             this.imgAddRoomType.Appearance.Options.UseFont = true;
             this.imgAddRoomType.Appearance.Options.UseImage = true;
-            this.imgAddRoomType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("imgAddRoomType.ImageOptions.Image")));
             this.imgAddRoomType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAddRoomType.Location = new System.Drawing.Point(83, 22);
+            this.imgAddRoomType.Location = new System.Drawing.Point(79, 22);
             this.imgAddRoomType.Margin = new System.Windows.Forms.Padding(2);
             this.imgAddRoomType.Name = "imgAddRoomType";
-            this.imgAddRoomType.Size = new System.Drawing.Size(32, 32);
+            this.imgAddRoomType.Size = new System.Drawing.Size(0, 13);
             this.imgAddRoomType.TabIndex = 70;
             // 
             // lbEditCustomerTypeHeader
@@ -62,7 +59,7 @@
             this.lbEditCustomerTypeHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
             this.lbEditCustomerTypeHeader.Appearance.Options.UseFont = true;
             this.lbEditCustomerTypeHeader.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbEditCustomerTypeHeader.Location = new System.Drawing.Point(119, 30);
+            this.lbEditCustomerTypeHeader.Location = new System.Drawing.Point(129, 22);
             this.lbEditCustomerTypeHeader.Margin = new System.Windows.Forms.Padding(2);
             this.lbEditCustomerTypeHeader.Name = "lbEditCustomerTypeHeader";
             this.lbEditCustomerTypeHeader.Size = new System.Drawing.Size(354, 24);
@@ -77,7 +74,7 @@
             this.lbOldCustomerType.Appearance.Options.UseTextOptions = true;
             this.lbOldCustomerType.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lbOldCustomerType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbOldCustomerType.Location = new System.Drawing.Point(158, 68);
+            this.lbOldCustomerType.Location = new System.Drawing.Point(154, 68);
             this.lbOldCustomerType.Margin = new System.Windows.Forms.Padding(2);
             this.lbOldCustomerType.Name = "lbOldCustomerType";
             this.lbOldCustomerType.Size = new System.Drawing.Size(65, 13);
@@ -87,7 +84,7 @@
             // tbCustomerType
             // 
             this.tbCustomerType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCustomerType.Location = new System.Drawing.Point(227, 65);
+            this.tbCustomerType.Location = new System.Drawing.Point(223, 65);
             this.tbCustomerType.Margin = new System.Windows.Forms.Padding(2);
             this.tbCustomerType.Name = "tbCustomerType";
             this.tbCustomerType.ReadOnly = true;
@@ -98,11 +95,14 @@
             // btnConfirm
             // 
             this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
+            this.btnConfirm.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirm.Appearance.Options.UseFont = true;
+            this.btnConfirm.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.apply_32x32;
             this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnConfirm.Location = new System.Drawing.Point(133, 142);
+            this.btnConfirm.Location = new System.Drawing.Point(129, 142);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnConfirm.Size = new System.Drawing.Size(105, 41);
             this.btnConfirm.TabIndex = 76;
             this.btnConfirm.Text = "XÁC NHẬN";
@@ -111,11 +111,14 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x321;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancel.Location = new System.Drawing.Point(290, 142);
+            this.btnCancel.Location = new System.Drawing.Point(286, 142);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnCancel.Size = new System.Drawing.Size(105, 41);
             this.btnCancel.TabIndex = 77;
             this.btnCancel.Text = "HỦY BỎ";
@@ -128,7 +131,7 @@
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.labelControl1.Location = new System.Drawing.Point(176, 102);
+            this.labelControl1.Location = new System.Drawing.Point(172, 102);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 13);
@@ -160,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 230);
+            this.ClientSize = new System.Drawing.Size(507, 230);
             this.Controls.Add(this.lbPercentage);
             this.Controls.Add(this.nudSurchagePercent);
             this.Controls.Add(this.labelControl1);

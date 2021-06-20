@@ -490,8 +490,54 @@ namespace GUI_QuanLy
                 this.tbFindRoomPrice.Text = curRow.Cells["FindRoomPrice"].Value.ToString() + " VND";
                 this.tbFindRoomStatus.Text = curRow.Cells["FindRoomStatus"].Value.ToString();
                 this.rtbFindRoomNote.Text = curRow.Cells["FindRoomNote"].Value.ToString();
+
+                string status = curRow.Cells["FindRoomStatus"].Value.ToString();
+                switch (status)
+                {
+                    case "Thuê":
+                        changeListRoomDetail(1, curRow.Cells["FindRoomID"].Value.ToString());
+                        break;
+                    case "Sửa":
+                        changeListRoomDetail(2, curRow.Cells["FindRoomID"].Value.ToString());
+                        break;
+                    case "Hỏng":
+                        changeListRoomDetail(3, curRow.Cells["FindRoomID"].Value.ToString());
+                        break;
+                    default:
+                        changeListRoomDetail(0, curRow.Cells["FindRoomID"].Value.ToString());
+                        break;
+                }
+            }            
+        }
+        public void changeListRoomDetail(int type,String roomId)
+        {
+            switch (type)
+            {
+                // thuê
+                case 1:
+                    gcRoomDetail.Text = "Danh sách Khách hàng đang thuê phòng " + roomId;
+                    break;
+                //sửa
+                case 2:
+                    gcRoomDetail.Text = "Danh sách chi tiết phòng " + roomId + " đang sửa ";
+                    break;
+                //hỏng
+                case 3:
+                    gcRoomDetail.Text = "Danh sách chi tiết vật tư hỏng phòng " + roomId;
+                    break;
+                default:
+                    gcRoomDetail.Visible = false;
+                    break;
             }
         }
+
+
+
+
+
+
+
+
         // tab 4 : RoomBill
         void ReLoadBillRoom()
         {
@@ -889,31 +935,7 @@ namespace GUI_QuanLy
         {
             return this.dgvCustomerType.CurrentRow.Cells["EditCustomerTypeName"].Value.ToString();
         }
-        private void tcHotelManagement_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void lbRoomList_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbRoomDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbRoomPrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbCustomerID_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -924,55 +946,5 @@ namespace GUI_QuanLy
         }
 
 
-
-
-        
-
-        private void lbFindRoomID2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvFindRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void gcRoomData_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lbAdditionalCustomerSurcharge_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbListRoomID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvListRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void gcRoomLease_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tbLeaseRoomPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gcFindroomData_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
     }
 }

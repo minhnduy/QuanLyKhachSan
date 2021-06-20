@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillSurchargeForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvSurchargeDetail = new System.Windows.Forms.DataGridView();
             this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdditionalCustomerSurcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ForeignCustomerSurcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalSurcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
-            this.imgAddRoomType = new DevExpress.XtraEditors.LabelControl();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lbEditSurchargeDetail = new DevExpress.XtraEditors.LabelControl();
+            this.imgAddRoomType = new DevExpress.XtraEditors.LabelControl();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurchargeDetail)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,16 +59,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 319);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbEditSurchargeDetail);
-            this.panel1.Controls.Add(this.imgAddRoomType);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(666, 77);
-            this.panel1.TabIndex = 1;
             // 
             // dgvSurchargeDetail
             // 
@@ -117,33 +106,15 @@
             this.TotalSurcharge.HeaderText = "TỔNG PHỤ THU (VND)";
             this.TotalSurcharge.Name = "TotalSurcharge";
             // 
-            // btnClose
+            // panel1
             // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnClose.Location = new System.Drawing.Point(2, 280);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(668, 37);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "ĐÓNG";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // imgAddRoomType
-            // 
-            this.imgAddRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.imgAddRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.imgAddRoomType.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("imgAddRoomType.Appearance.Image")));
-            this.imgAddRoomType.Appearance.Options.UseFont = true;
-            this.imgAddRoomType.Appearance.Options.UseImage = true;
-            this.imgAddRoomType.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("imgAddRoomType.ImageOptions.Image")));
-            this.imgAddRoomType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAddRoomType.Location = new System.Drawing.Point(240, 23);
-            this.imgAddRoomType.Margin = new System.Windows.Forms.Padding(2);
-            this.imgAddRoomType.Name = "imgAddRoomType";
-            this.imgAddRoomType.Size = new System.Drawing.Size(32, 32);
-            this.imgAddRoomType.TabIndex = 72;
+            this.panel1.Controls.Add(this.lbEditSurchargeDetail);
+            this.panel1.Controls.Add(this.imgAddRoomType);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(666, 77);
+            this.panel1.TabIndex = 1;
             // 
             // lbEditSurchargeDetail
             // 
@@ -158,6 +129,35 @@
             this.lbEditSurchargeDetail.TabIndex = 73;
             this.lbEditSurchargeDetail.Text = "CHI TIẾT PHỤ THU";
             // 
+            // imgAddRoomType
+            // 
+            this.imgAddRoomType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.imgAddRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.imgAddRoomType.Appearance.Options.UseFont = true;
+            this.imgAddRoomType.Appearance.Options.UseImage = true;
+            this.imgAddRoomType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.imgAddRoomType.Location = new System.Drawing.Point(240, 23);
+            this.imgAddRoomType.Margin = new System.Windows.Forms.Padding(2);
+            this.imgAddRoomType.Name = "imgAddRoomType";
+            this.imgAddRoomType.Size = new System.Drawing.Size(0, 13);
+            this.imgAddRoomType.TabIndex = 72;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Appearance.Options.UseFont = true;
+            this.btnClose.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x321;
+            this.btnClose.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnClose.Location = new System.Drawing.Point(565, 282);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnClose.Size = new System.Drawing.Size(105, 35);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "ĐÓNG";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // BillSurchargeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,9 +168,9 @@
             this.Text = "CHI TIẾT PHỤ THU";
             this.Load += new System.EventHandler(this.BillSurchargeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSurchargeDetail)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSurchargeDetail)).EndInit();
             this.ResumeLayout(false);
 
         }

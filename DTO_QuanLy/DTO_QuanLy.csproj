@@ -43,6 +43,7 @@
     <Compile Include="CustomerTypeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomBillDTO.cs" />
+    <Compile Include="RoomDetailDTO.cs" />
     <Compile Include="RoomDTO.cs" />
     <Compile Include="RoomLeaseDetailDTO.cs" />
     <Compile Include="RoomLeaseDTO.cs" />

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerForm));
             this.imgCustomer = new DevExpress.XtraEditors.LabelControl();
             this.lbCustomerHeader = new DevExpress.XtraEditors.LabelControl();
             this.lbCustomerName = new DevExpress.XtraEditors.LabelControl();
@@ -39,8 +38,8 @@
             this.cbCustomerType = new System.Windows.Forms.ComboBox();
             this.tbCustomerID = new System.Windows.Forms.TextBox();
             this.rtbCustomerAddress = new System.Windows.Forms.RichTextBox();
-            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
+            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
             this.SuspendLayout();
             // 
             // imgCustomer
@@ -48,11 +47,9 @@
             this.imgCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.imgCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.imgCustomer.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("imgCustomer.Appearance.Image")));
             this.imgCustomer.Appearance.Options.UseFont = true;
             this.imgCustomer.Appearance.Options.UseImage = true;
             this.imgCustomer.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.imgCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("imgCustomer.ImageOptions.Image")));
             this.imgCustomer.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
             this.imgCustomer.Location = new System.Drawing.Point(69, 40);
             this.imgCustomer.Margin = new System.Windows.Forms.Padding(2);
@@ -178,31 +175,37 @@
             this.rtbCustomerAddress.TabIndex = 80;
             this.rtbCustomerAddress.Text = "";
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
-            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnConfirm.Location = new System.Drawing.Point(151, 309);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(108, 42);
-            this.btnConfirm.TabIndex = 81;
-            this.btnConfirm.Text = "XÁC NHẬN";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
+            this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Appearance.Options.UseFont = true;
+            this.btnCancel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x32;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCancel.Location = new System.Drawing.Point(279, 310);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnCancel.Size = new System.Drawing.Size(105, 41);
             this.btnCancel.TabIndex = 82;
             this.btnCancel.Text = "HỦY BỎ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirm.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnConfirm.Appearance.Options.UseFont = true;
+            this.btnConfirm.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.apply_32x32;
+            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnConfirm.Location = new System.Drawing.Point(151, 309);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnConfirm.Size = new System.Drawing.Size(108, 42);
+            this.btnConfirm.TabIndex = 81;
+            this.btnConfirm.Text = "XÁC NHẬN";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // CustomerForm
             // 

@@ -19,7 +19,6 @@ namespace DAO_QuanLY
                 {
                     connection.Open();
                 }
-
                 var command = new SqlCommand("LietKeDanhMucPhong", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.ExecuteNonQuery();
