@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.dgvSurchargeDetail = new System.Windows.Forms.DataGridView();
             this.RoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AdditionalCustomerSurcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +38,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbEditSurchargeDetail = new DevExpress.XtraEditors.LabelControl();
             this.imgAddRoomType = new DevExpress.XtraEditors.LabelControl();
-            this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSurchargeDetail)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,6 +59,22 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 319);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Appearance.Options.UseFont = true;
+            this.btnClose.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x321;
+            this.btnClose.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnClose.Location = new System.Drawing.Point(565, 282);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnClose.Size = new System.Drawing.Size(105, 35);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "ĐÓNG";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvSurchargeDetail
             // 
@@ -112,6 +128,8 @@
             this.panel1.Controls.Add(this.imgAddRoomType);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.MaximumSize = new System.Drawing.Size(666, 77);
+            this.panel1.MinimumSize = new System.Drawing.Size(666, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(666, 77);
             this.panel1.TabIndex = 1;
@@ -122,7 +140,7 @@
             this.lbEditSurchargeDetail.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
             this.lbEditSurchargeDetail.Appearance.Options.UseFont = true;
             this.lbEditSurchargeDetail.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbEditSurchargeDetail.Location = new System.Drawing.Point(276, 31);
+            this.lbEditSurchargeDetail.Location = new System.Drawing.Point(240, 23);
             this.lbEditSurchargeDetail.Margin = new System.Windows.Forms.Padding(2);
             this.lbEditSurchargeDetail.Name = "lbEditSurchargeDetail";
             this.lbEditSurchargeDetail.Size = new System.Drawing.Size(187, 24);
@@ -142,29 +160,16 @@
             this.imgAddRoomType.Size = new System.Drawing.Size(0, 13);
             this.imgAddRoomType.TabIndex = 72;
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnClose.Appearance.Options.UseFont = true;
-            this.btnClose.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x321;
-            this.btnClose.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnClose.Location = new System.Drawing.Point(565, 282);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnClose.Size = new System.Drawing.Size(105, 35);
-            this.btnClose.TabIndex = 15;
-            this.btnClose.Text = "ĐÓNG";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // BillSurchargeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 319);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(688, 358);
+            this.MinimumSize = new System.Drawing.Size(688, 358);
             this.Name = "BillSurchargeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CHI TIẾT PHỤ THU";
             this.Load += new System.EventHandler(this.BillSurchargeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

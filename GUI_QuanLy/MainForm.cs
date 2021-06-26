@@ -15,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
+using System.Linq;
 
 namespace GUI_QuanLy
 {
@@ -479,11 +480,22 @@ namespace GUI_QuanLy
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+
+        }
+        public RoomDTO GetSelectedRoomFind()
+        {
+            RoomDTO room = new RoomDTO();
+            room.RoomID = this.tbFindRoomID.Text;
+            room.RoomTypeID = this.tbFindRoomType.Text;
+            room.RoomNote = this.rtbFindRoomNote.Text;
+            room.RoomStatus = this.tbFindRoomStatus.Text;
+            return room;
         }
         private void DgvFoundRoom_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                dvRoomDetail.Columns.Clear();
                 var curRow = this.dgvFindRoom.CurrentRow;
                 this.tbFindRoomID.Text = curRow.Cells["FindRoomID"].Value.ToString();
                 this.tbFindRoomType.Text = curRow.Cells["FindRoomType"].Value.ToString();
@@ -492,48 +504,338 @@ namespace GUI_QuanLy
                 this.rtbFindRoomNote.Text = curRow.Cells["FindRoomNote"].Value.ToString();
 
                 string status = curRow.Cells["FindRoomStatus"].Value.ToString();
+                gcRoomDetail.Enabled = false;
                 switch (status)
                 {
                     case "Thuê":
+                        if (gcRoomDetail.Enabled == false)
+                        {
+                            gcRoomDetail.Enabled = true;
+                        }
+                        if (dvRoomDetail.Visible == false)
+                        {
+                            dvRoomDetail.Visible = true;
+                        }
                         changeListRoomDetail(1, curRow.Cells["FindRoomID"].Value.ToString());
                         break;
                     case "Sửa":
+                        if (gcRoomDetail.Enabled == false)
+                        {
+                            gcRoomDetail.Enabled = true;
+                        }
+                        if (dvRoomDetail.Visible == false)
+                        {
+                            dvRoomDetail.Visible = true;
+                        }
                         changeListRoomDetail(2, curRow.Cells["FindRoomID"].Value.ToString());
                         break;
                     case "Hỏng":
+                        if (gcRoomDetail.Enabled == false)
+                        {
+                            gcRoomDetail.Enabled = true;
+                        }
+                        if (dvRoomDetail.Visible == false)
+                        {
+                            dvRoomDetail.Visible = true;
+                        }
                         changeListRoomDetail(3, curRow.Cells["FindRoomID"].Value.ToString());
                         break;
                     default:
-                        changeListRoomDetail(0, curRow.Cells["FindRoomID"].Value.ToString());
+                        gcRoomDetail.Text = "";
+                        gcRoomDetail.Enabled = false;
+                        dvRoomDetail.Visible = false;
                         break;
                 }
-            }            
+            }
         }
-        public void changeListRoomDetail(int type,String roomId)
+        public void changeListRoomDetail(int type, String roomId)
         {
             switch (type)
             {
                 // thuê
                 case 1:
                     gcRoomDetail.Text = "Danh sách Khách hàng đang thuê phòng " + roomId;
+                    DataTable dt = RoomDetailBUS.GetRoomDetailListCustomer(roomId);
+                    if (dt != null)
+                    {
+                        int countRows = dt.Rows.Count;
+                        DataTable dt1 = new DataTable("Customer");
+                        dt1.Columns.Add("STT", System.Type.GetType("System.Int32"));
+                        dt1.Columns.Add("Tên khách hàng", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("CMND/CCCD", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("Loại Khách", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("Địa chỉ", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("Type", System.Type.GetType("System.Int32"));
+                        for (int i = 0; i < countRows; i++)
+                        {
+                            dt1.Rows.Add(new object[] { i + 1, dt.Rows[i]["KhachHang"], dt.Rows[i]["CMND"], dt.Rows[i]["TenLoaiKhachHang"], dt.Rows[i]["DiaChi"], dt.Rows[i]["MaLoaiKhachHang"] });
+                        }
+                        dvRoomDetail.DataSource = dt1;
+                        dvRoomDetail.Columns[0].Width = 50;
+                        dvRoomDetail.Columns[1].Width = 200;
+                        dvRoomDetail.Columns[2].Width = 100;
+                        dvRoomDetail.Columns[4].Width = 250;
+                        dvRoomDetail.Columns[5].Visible = false;
+                    }
+                    else
+                    {
+                        dvRoomDetail.Columns.Add("STT", "STT");
+                        dvRoomDetail.Columns.Add("KhachHang", "Tên khách hàng");
+                        dvRoomDetail.Columns.Add("CMND", "CMND/CCCD");
+                        dvRoomDetail.Columns.Add("MaLoaiKhachHang", "Loại Khách");
+                        dvRoomDetail.Columns.Add("DiaChi", "Địa chỉ");
+                    }
+                    this.dvRoomDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                     break;
                 //sửa
                 case 2:
                     gcRoomDetail.Text = "Danh sách chi tiết phòng " + roomId + " đang sửa ";
+                    dt = new DataTable();
+                    dt = RoomDetailBUS.GetRoomDetailList(roomId);
+                    if (dt != null)
+                    {
+                        int countRows = dt.Rows.Count;
+                        DataTable dt1 = new DataTable("Customer");
+                        dt1.Columns.Add("STT", System.Type.GetType("System.Int32"));
+                        dt1.Columns.Add("Vật tư đang sửa", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("ID", System.Type.GetType("System.Int32"));
+                        for (int i = 0; i < countRows; i++)
+                        {
+                            dt1.Rows.Add(new object[] { i + 1, dt.Rows[i]["SUA_VAT_TU"], dt.Rows[i]["ID"] });
+                        }
+                        dvRoomDetail.DataSource = dt1;
+                        dvRoomDetail.Columns["ID"].Visible = false;
+                        dvRoomDetail.Columns[0].Width = 50;
+                        dvRoomDetail.Columns["Vật tư đang sửa"].Width = 250;
+                    }
+                    else
+                    {
+                        dvRoomDetail.Columns.Add("STT", "STT");
+                        dvRoomDetail.Columns.Add("SUA", "Vật tư đang sửa");
+                    }
+                    this.dvRoomDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                     break;
                 //hỏng
                 case 3:
                     gcRoomDetail.Text = "Danh sách chi tiết vật tư hỏng phòng " + roomId;
+                    dt = new DataTable();
+                    dt = RoomDetailBUS.GetRoomDetailList(roomId);
+                    if (dt != null)
+                    {
+                        int countRows = dt.Rows.Count;
+                        DataTable dt1 = new DataTable("Customer");
+                        dt1.Columns.Add("STT", System.Type.GetType("System.Int32"));
+                        dt1.Columns.Add("Vật tư bị hỏng", System.Type.GetType("System.String"));
+                        dt1.Columns.Add("ID", System.Type.GetType("System.Int32"));
+                        for (int i = 0; i < countRows; i++)
+                        {
+                            dt1.Rows.Add(new object[] { i + 1, dt.Rows[i]["HONG_VAT_TU"], dt.Rows[i]["ID"] });
+                        }
+                        dvRoomDetail.DataSource = dt1;
+                        dvRoomDetail.Columns["ID"].Visible = false;
+                        dvRoomDetail.Columns[0].Width = 50;
+                        dvRoomDetail.Columns["Vật tư bị hỏng"].Width = 250;
+                    }
+                    else
+                    {
+                        dvRoomDetail.Columns.Add("STT", "STT");
+                        dvRoomDetail.Columns.Add("HONG_VAT_TU", "Vật tư bị hỏng");
+                    }
+                    this.dvRoomDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                     break;
                 default:
-                    gcRoomDetail.Visible = false;
                     break;
             }
         }
 
+        private void btnRoomDetailAdd_Click(object sender, EventArgs e)
+        {
+            var curRow = this.dgvFindRoom.CurrentRow;
+            string status = curRow.Cells["FindRoomStatus"].Value.ToString();
+            switch (status)
+            {
+                case "Thuê":
+                    if (CustomerTypeBUS.GetCustomerTypeList().Rows.Count > 0)
+                    {
+                        if (this.dvRoomDetail.Rows.Count-1 == RoomBUS.GetMaxCustomerInRoom())
+                        {
+                            MessageBox.Show(
+                                "Số khách trong phòng đã đạt mức tối đa!",
+                                "THÊM KHÁCH THẤT BẠI",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            var CustomerForm = new CustomerForm();
+                            CustomerForm.CustomerAction1 = "AddForm";
+                            CustomerForm.ShowDialog(this);
+                            changeListRoomDetail(1, curRow.Cells["FindRoomID"].Value.ToString());
+                            dvRoomDetail.Refresh();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(
+                            "Chưa có loại khách!",
+                            "THÊM KHÁCH THẤT BẠI",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                    }
+                    break;
+                case "Sửa":
+                    if (RoomTypeBUS.GetRoomTypeList().Rows.Count > 0)
+                    {
+                        var RoomDetailForm = new RoomDetailForm();
+                        RoomDetailForm.RoomDetailFormAction = "AddRoom_Sua";
+                        RoomDetailForm.ShowDialog(this);
+                        changeListRoomDetail(2, curRow.Cells["FindRoomID"].Value.ToString());
+                        dvRoomDetail.Refresh();
+                    }
+                    break;
+                case "Hỏng":
+                    if (RoomTypeBUS.GetRoomTypeList().Rows.Count > 0)
+                    {
+                        var RoomDetailForm = new RoomDetailForm();
+                        RoomDetailForm.RoomDetailFormAction = "AddRoom_Hong";
+                        RoomDetailForm.ShowDialog(this);
+                        changeListRoomDetail(3, curRow.Cells["FindRoomID"].Value.ToString());
+                        dvRoomDetail.Refresh();
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
 
+        private void btnRoomDetailEdit_Click(object sender, EventArgs e)
+        {
+            var curRow = this.dgvFindRoom.CurrentRow;
+            string status = curRow.Cells["FindRoomStatus"].Value.ToString();
+            try
+            {
+                var curRow1 = this.dvRoomDetail.CurrentRow;
+                if (curRow1.Cells["STT"].Value.ToString() != "")
+                {
+                    switch (status)
+                    {
+                        case "Thuê":
+                            var CustomerForm = new CustomerForm();
+                            CustomerForm.CustomerAction1 = "EditForm";
+                            CustomerForm.ShowDialog(this);
+                            changeListRoomDetail(1, curRow.Cells["FindRoomID"].Value.ToString());
+                            dvRoomDetail.Refresh();
+                            break;
+                        case "Sửa":
+                            if (RoomTypeBUS.GetRoomTypeList().Rows.Count > 0)
+                            {
+                                var RoomDetailForm = new RoomDetailForm();
+                                RoomDetailForm.RoomDetailFormAction = "EditRoom_Sua";
+                                RoomDetailForm.ShowDialog(this);
+                                changeListRoomDetail(2, curRow.Cells["FindRoomID"].Value.ToString());
+                                dvRoomDetail.Refresh();
+                            }
+                            break;
+                        case "Hỏng":
+                            if (RoomTypeBUS.GetRoomTypeList().Rows.Count > 0)
+                            {
+                                var RoomDetailForm = new RoomDetailForm();
+                                RoomDetailForm.RoomDetailFormAction = "EditRoom_Hong";
+                                RoomDetailForm.ShowDialog(this);
+                                changeListRoomDetail(3, curRow.Cells["FindRoomID"].Value.ToString());
+                                dvRoomDetail.Refresh();
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(
+                    "Không có thông tin nào đang được chọn ",
+                    "KHÔNG CÓ THÔNG TIN",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+        }
 
+        private void btnRoomDetailRemove_Click(object sender, EventArgs e)
+        {
+            var curRow = this.dgvFindRoom.CurrentRow;
+            string status = curRow.Cells["FindRoomStatus"].Value.ToString();
+            var curRow1 = this.dvRoomDetail.CurrentRow;
+            if (curRow1.Cells["STT"].Value.ToString() != "")
+            {
+                switch (status)
+                {
+                    case "Thuê":
 
+                        if (RoomDetailBUS.RoomDetail_DeleteCustomer(curRow.Cells["FindRoomID"].Value.ToString(),dvRoomDetail.CurrentRow.Cells["CMND/CCCD"].Value.ToString()))
+                        {
+                            MessageBox.Show(
+                                   "Xoá khách hàng thành công!",
+                                   "",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                            changeListRoomDetail(1, curRow.Cells["FindRoomID"].Value.ToString());
+                            dvRoomDetail.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                   "Xoá khách hàng không thành công!",
+                                   "LỖI",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                        }
+                        break;
+                    case "Sửa":
+                        if (RoomDetailBUS.DeleteRoomDetail(curRow.Cells["FindRoomID"].Value.ToString(), int.Parse(dvRoomDetail.CurrentRow.Cells["ID"].Value.ToString())))
+                        {
+                            MessageBox.Show(
+                                   "Xoá thông tin vật tư sửa thành công!",
+                                   "",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                            changeListRoomDetail(2, curRow.Cells["FindRoomID"].Value.ToString());
+                            dvRoomDetail.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                   "Xoá thông tin vật tư sửa không thành công!",
+                                   "LỖI",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                        }
+                        break;
+                    case "Hỏng":
+                        if (RoomDetailBUS.DeleteRoomDetail(curRow.Cells["FindRoomID"].Value.ToString(), int.Parse(dvRoomDetail.CurrentRow.Cells["ID"].Value.ToString())))
+                        {
+                            MessageBox.Show(
+                                   "Xoá thông tin vật tư sửa thành công!",
+                                   "",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+                            changeListRoomDetail(3, curRow.Cells["FindRoomID"].Value.ToString());
+                            dvRoomDetail.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show(
+                                   "Xoá thông tin vật tư sửa không thành công!",
+                                   "LỖI",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
 
 
 
@@ -584,6 +886,17 @@ namespace GUI_QuanLy
             }
         }
 
+        public void cbCustomerListLoad()
+        {
+            DataTable dt = RoomDetailBUS.GetListCustomer();
+            if (dt != null)
+            {
+                this.cbCustumerList.DataSource = dt;
+                this.cbCustumerList.DisplayMember = dt.Columns[1].ColumnName.ToString();
+                this.cbCustumerList.ValueMember = dt.Columns[0].ColumnName.ToString();
+            }
+        }
+
         private void BtnLockBill_EnabledChanged(object sender, EventArgs e)
         {
             if (this.btnLockBill.Enabled == true)
@@ -610,13 +923,13 @@ namespace GUI_QuanLy
             // Thêm chi tiết thanh toán của phòng đã chọn vào DataGrid
             var BillDate = DateTime.ParseExact(deBillDate.Text, "d/M/yyyy", CultureInfo.InvariantCulture).ToString("d");
             var dr = RoomBillBUS.GetLeasePayment(this.cbAddBillRoomID.Text, BillDate).Rows[0];
-                this.dgvBillRoom.Rows.Add(
-                    dr["MaPhong"],
-                    dr["SoNgayThue"],
-                    Convert.ToInt64(dr["DonGia"]).ToString("N0"),
-                    Convert.ToInt64(dr["PhuThuKhachThem"]).ToString("N0"),
-                    Convert.ToInt64(dr["PhuThuKhachTheoLoaiKhach"]).ToString("N0"),
-                    Convert.ToInt64(dr["ThanhTien"]).ToString("N0"));
+            this.dgvBillRoom.Rows.Add(
+                dr["MaPhong"],
+                dr["SoNgayThue"],
+                Convert.ToInt64(dr["DonGia"]).ToString("N0"),
+                Convert.ToInt64(dr["PhuThuKhachThem"]).ToString("N0"),
+                Convert.ToInt64(dr["PhuThuKhachTheoLoaiKhach"]).ToString("N0"),
+                Convert.ToInt64(dr["ThanhTien"]).ToString("N0"));
         }
         private void DgvBillRoom_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -721,7 +1034,7 @@ namespace GUI_QuanLy
         {
             this.cbRevenueMonth.Items.Clear();
             this.cbRevenueYear.Items.Clear();
-            
+
 
             var dt = RoomReportBUS.GetMonthYear();
             if (dt.Rows.Count != 0)
@@ -927,7 +1240,7 @@ namespace GUI_QuanLy
         }
         private void btnEditCustomerType_Click(object sender, EventArgs e)
         {
-            
+
             var EditForm = new CustomerTypeEditForm();
             EditForm.ShowDialog(this);
         }
@@ -935,16 +1248,44 @@ namespace GUI_QuanLy
         {
             return this.dgvCustomerType.CurrentRow.Cells["EditCustomerTypeName"].Value.ToString();
         }
-       
+
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(MessageBox.Show("Bạn thật sự muốn thoát chương trình ?","Thông báo",MessageBoxButtons.OKCancel)!=System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Bạn thật sự muốn thoát chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel = true;
             }
         }
 
+
+        private void btnOutExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOutPDF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCustumerList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbCustumerList.SelectedIndex;
+            DataRowView dr = (DataRowView)cbCustumerList.Items[index];
+            string cmnd = dr[0].ToString();
+            DataTable dt = RoomDetailBUS.GetInfoCustomerByCMND(cmnd);
+            this.tbBillCustomerName.Text = dt.Rows[0][3].ToString();
+            this.rtbBillCustomerAddress.Text = dt.Rows[0][4].ToString();
+        }
+
+        private void tcHotelManagement_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (tcHotelManagement.SelectedTabPage.Name.ToString() == "tabRoomBill")
+            {
+                this.cbCustomerListLoad();
+            }
+        }
 
     }
 }

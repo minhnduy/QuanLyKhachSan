@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbBillAddress = new System.Windows.Forms.TextBox();
             this.tbBillCustomer = new System.Windows.Forms.TextBox();
@@ -60,6 +59,7 @@
             this.lbTaxCurrency = new DevExpress.XtraEditors.LabelControl();
             this.tbBillSurcharge = new System.Windows.Forms.TextBox();
             this.lbBillTax = new DevExpress.XtraEditors.LabelControl();
+            this.btnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.btnTaxDetail = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -78,9 +78,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.gcBillData, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.gcBillDetail, 2, 1);
@@ -88,26 +88,11 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(725, 499);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(750, 499);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.Appearance.Options.UseFont = true;
-            this.btnCreate.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_pay_by_cash_24;
-            this.btnCreate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCreate.Location = new System.Drawing.Point(544, 5);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnCreate.Size = new System.Drawing.Size(177, 35);
-            this.btnCreate.TabIndex = 29;
-            this.btnCreate.Text = "THANH TOÁN HOÁ ĐƠN";
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // panel1
             // 
@@ -123,13 +108,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(719, 193);
+            this.panel1.Size = new System.Drawing.Size(744, 168);
             this.panel1.TabIndex = 1;
             // 
             // tbBillAddress
             // 
             this.tbBillAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbBillAddress.Location = new System.Drawing.Point(260, 143);
+            this.tbBillAddress.Location = new System.Drawing.Point(273, 131);
             this.tbBillAddress.Name = "tbBillAddress";
             this.tbBillAddress.ReadOnly = true;
             this.tbBillAddress.Size = new System.Drawing.Size(221, 20);
@@ -138,7 +123,7 @@
             // tbBillCustomer
             // 
             this.tbBillCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbBillCustomer.Location = new System.Drawing.Point(260, 107);
+            this.tbBillCustomer.Location = new System.Drawing.Point(273, 95);
             this.tbBillCustomer.Name = "tbBillCustomer";
             this.tbBillCustomer.ReadOnly = true;
             this.tbBillCustomer.Size = new System.Drawing.Size(221, 20);
@@ -147,7 +132,7 @@
             // tbBillDate
             // 
             this.tbBillDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbBillDate.Location = new System.Drawing.Point(260, 71);
+            this.tbBillDate.Location = new System.Drawing.Point(273, 59);
             this.tbBillDate.Name = "tbBillDate";
             this.tbBillDate.ReadOnly = true;
             this.tbBillDate.Size = new System.Drawing.Size(221, 20);
@@ -159,7 +144,7 @@
             this.lbBillAddress.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillAddress.Appearance.Options.UseFont = true;
             this.lbBillAddress.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillAddress.Location = new System.Drawing.Point(210, 143);
+            this.lbBillAddress.Location = new System.Drawing.Point(223, 131);
             this.lbBillAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillAddress.Name = "lbBillAddress";
             this.lbBillAddress.Size = new System.Drawing.Size(44, 13);
@@ -172,7 +157,7 @@
             this.lbBillCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillCustomer.Appearance.Options.UseFont = true;
             this.lbBillCustomer.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillCustomer.Location = new System.Drawing.Point(165, 110);
+            this.lbBillCustomer.Location = new System.Drawing.Point(178, 98);
             this.lbBillCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillCustomer.Name = "lbBillCustomer";
             this.lbBillCustomer.Size = new System.Drawing.Size(89, 13);
@@ -185,7 +170,7 @@
             this.lbBillDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillDate.Appearance.Options.UseFont = true;
             this.lbBillDate.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillDate.Location = new System.Drawing.Point(155, 78);
+            this.lbBillDate.Location = new System.Drawing.Point(168, 66);
             this.lbBillDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillDate.Name = "lbBillDate";
             this.lbBillDate.Size = new System.Drawing.Size(99, 13);
@@ -198,7 +183,7 @@
             this.lbBillHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
             this.lbBillHeader.Appearance.Options.UseFont = true;
             this.lbBillHeader.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillHeader.Location = new System.Drawing.Point(217, 34);
+            this.lbBillHeader.Location = new System.Drawing.Point(178, 19);
             this.lbBillHeader.Margin = new System.Windows.Forms.Padding(2);
             this.lbBillHeader.Name = "lbBillHeader";
             this.lbBillHeader.Size = new System.Drawing.Size(332, 24);
@@ -212,7 +197,7 @@
             this.imgRoomBill.Appearance.Options.UseFont = true;
             this.imgRoomBill.Appearance.Options.UseImage = true;
             this.imgRoomBill.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgRoomBill.Location = new System.Drawing.Point(155, 26);
+            this.imgRoomBill.Location = new System.Drawing.Point(116, 11);
             this.imgRoomBill.Margin = new System.Windows.Forms.Padding(2);
             this.imgRoomBill.Name = "imgRoomBill";
             this.imgRoomBill.Size = new System.Drawing.Size(0, 13);
@@ -223,9 +208,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.gcBillData, 2);
             this.gcBillData.Controls.Add(this.dgvBillData);
             this.gcBillData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcBillData.Location = new System.Drawing.Point(3, 202);
+            this.gcBillData.Location = new System.Drawing.Point(3, 177);
             this.gcBillData.Name = "gcBillData";
-            this.gcBillData.Size = new System.Drawing.Size(428, 294);
+            this.gcBillData.Size = new System.Drawing.Size(493, 319);
             this.gcBillData.TabIndex = 1;
             this.gcBillData.Text = "DANH MỤC THANH TOÁN";
             // 
@@ -249,7 +234,7 @@
             this.dgvBillData.ReadOnly = true;
             this.dgvBillData.RowTemplate.Height = 24;
             this.dgvBillData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBillData.Size = new System.Drawing.Size(424, 269);
+            this.dgvBillData.Size = new System.Drawing.Size(489, 294);
             this.dgvBillData.TabIndex = 3;
             this.dgvBillData.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.DgvBillData_RowPostPaint);
             // 
@@ -311,9 +296,9 @@
             this.gcBillDetail.Controls.Add(this.tbBillSurcharge);
             this.gcBillDetail.Controls.Add(this.lbBillTax);
             this.gcBillDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcBillDetail.Location = new System.Drawing.Point(437, 202);
+            this.gcBillDetail.Location = new System.Drawing.Point(502, 177);
             this.gcBillDetail.Name = "gcBillDetail";
-            this.gcBillDetail.Size = new System.Drawing.Size(285, 294);
+            this.gcBillDetail.Size = new System.Drawing.Size(245, 319);
             this.gcBillDetail.TabIndex = 2;
             this.gcBillDetail.Text = "THANH TOÁN HÓA ĐƠN";
             // 
@@ -323,7 +308,7 @@
             this.lbChangeCurrency.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbChangeCurrency.Appearance.Options.UseFont = true;
             this.lbChangeCurrency.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbChangeCurrency.Location = new System.Drawing.Point(210, 212);
+            this.lbChangeCurrency.Location = new System.Drawing.Point(190, 225);
             this.lbChangeCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbChangeCurrency.Name = "lbChangeCurrency";
             this.lbChangeCurrency.Size = new System.Drawing.Size(28, 13);
@@ -333,7 +318,7 @@
             // tbChange
             // 
             this.tbChange.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbChange.Location = new System.Drawing.Point(91, 209);
+            this.tbChange.Location = new System.Drawing.Point(71, 222);
             this.tbChange.Name = "tbChange";
             this.tbChange.ReadOnly = true;
             this.tbChange.Size = new System.Drawing.Size(113, 21);
@@ -345,7 +330,7 @@
             this.lbChange.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbChange.Appearance.Options.UseFont = true;
             this.lbChange.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbChange.Location = new System.Drawing.Point(27, 209);
+            this.lbChange.Location = new System.Drawing.Point(7, 222);
             this.lbChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbChange.Name = "lbChange";
             this.lbChange.Size = new System.Drawing.Size(58, 13);
@@ -358,7 +343,7 @@
             this.lbReceivedMoneyCurrency.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbReceivedMoneyCurrency.Appearance.Options.UseFont = true;
             this.lbReceivedMoneyCurrency.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbReceivedMoneyCurrency.Location = new System.Drawing.Point(210, 167);
+            this.lbReceivedMoneyCurrency.Location = new System.Drawing.Point(190, 180);
             this.lbReceivedMoneyCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbReceivedMoneyCurrency.Name = "lbReceivedMoneyCurrency";
             this.lbReceivedMoneyCurrency.Size = new System.Drawing.Size(28, 13);
@@ -368,7 +353,7 @@
             // tbReceivedMoney
             // 
             this.tbReceivedMoney.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbReceivedMoney.Location = new System.Drawing.Point(91, 164);
+            this.tbReceivedMoney.Location = new System.Drawing.Point(71, 177);
             this.tbReceivedMoney.MaxLength = 15;
             this.tbReceivedMoney.Name = "tbReceivedMoney";
             this.tbReceivedMoney.Size = new System.Drawing.Size(113, 21);
@@ -383,7 +368,7 @@
             this.lbReceivedMoney.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbReceivedMoney.Appearance.Options.UseFont = true;
             this.lbReceivedMoney.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbReceivedMoney.Location = new System.Drawing.Point(27, 167);
+            this.lbReceivedMoney.Location = new System.Drawing.Point(7, 180);
             this.lbReceivedMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbReceivedMoney.Name = "lbReceivedMoney";
             this.lbReceivedMoney.Size = new System.Drawing.Size(58, 13);
@@ -396,7 +381,7 @@
             this.lbBillCostCurrency.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillCostCurrency.Appearance.Options.UseFont = true;
             this.lbBillCostCurrency.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillCostCurrency.Location = new System.Drawing.Point(210, 127);
+            this.lbBillCostCurrency.Location = new System.Drawing.Point(190, 140);
             this.lbBillCostCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillCostCurrency.Name = "lbBillCostCurrency";
             this.lbBillCostCurrency.Size = new System.Drawing.Size(28, 13);
@@ -406,7 +391,7 @@
             // tbBillPrice
             // 
             this.tbBillPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbBillPrice.Location = new System.Drawing.Point(91, 124);
+            this.tbBillPrice.Location = new System.Drawing.Point(71, 137);
             this.tbBillPrice.Name = "tbBillPrice";
             this.tbBillPrice.ReadOnly = true;
             this.tbBillPrice.Size = new System.Drawing.Size(113, 21);
@@ -418,7 +403,7 @@
             this.lbBillCost.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillCost.Appearance.Options.UseFont = true;
             this.lbBillCost.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillCost.Location = new System.Drawing.Point(43, 127);
+            this.lbBillCost.Location = new System.Drawing.Point(23, 140);
             this.lbBillCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillCost.Name = "lbBillCost";
             this.lbBillCost.Size = new System.Drawing.Size(42, 13);
@@ -431,7 +416,7 @@
             this.lbTaxCurrency.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbTaxCurrency.Appearance.Options.UseFont = true;
             this.lbTaxCurrency.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbTaxCurrency.Location = new System.Drawing.Point(210, 81);
+            this.lbTaxCurrency.Location = new System.Drawing.Point(190, 94);
             this.lbTaxCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbTaxCurrency.Name = "lbTaxCurrency";
             this.lbTaxCurrency.Size = new System.Drawing.Size(28, 13);
@@ -441,7 +426,7 @@
             // tbBillSurcharge
             // 
             this.tbBillSurcharge.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbBillSurcharge.Location = new System.Drawing.Point(91, 78);
+            this.tbBillSurcharge.Location = new System.Drawing.Point(71, 91);
             this.tbBillSurcharge.Name = "tbBillSurcharge";
             this.tbBillSurcharge.ReadOnly = true;
             this.tbBillSurcharge.Size = new System.Drawing.Size(113, 21);
@@ -453,12 +438,27 @@
             this.lbBillTax.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillTax.Appearance.Options.UseFont = true;
             this.lbBillTax.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillTax.Location = new System.Drawing.Point(38, 81);
+            this.lbBillTax.Location = new System.Drawing.Point(18, 94);
             this.lbBillTax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillTax.Name = "lbBillTax";
             this.lbBillTax.Size = new System.Drawing.Size(47, 13);
             this.lbBillTax.TabIndex = 55;
             this.lbBillTax.Text = "PHỤ THU:";
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCreate.Appearance.Options.UseFont = true;
+            this.btnCreate.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_pay_by_cash_24;
+            this.btnCreate.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnCreate.Location = new System.Drawing.Point(544, 5);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnCreate.Size = new System.Drawing.Size(177, 35);
+            this.btnCreate.TabIndex = 29;
+            this.btnCreate.Text = "THANH TOÁN HOÁ ĐƠN";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnTaxDetail
             // 
@@ -498,7 +498,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 499);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(725, 45);
+            this.panel2.Size = new System.Drawing.Size(750, 45);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -507,17 +507,20 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(725, 499);
+            this.panel3.Size = new System.Drawing.Size(750, 499);
             this.panel3.TabIndex = 2;
             // 
             // BillDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 544);
+            this.ClientSize = new System.Drawing.Size(750, 544);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.MaximumSize = new System.Drawing.Size(766, 583);
+            this.MinimumSize = new System.Drawing.Size(766, 583);
             this.Name = "BillDetailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CHI TIẾT HÓA ĐƠN THANH TOÁN";
             this.Load += new System.EventHandler(this.BillDetailForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

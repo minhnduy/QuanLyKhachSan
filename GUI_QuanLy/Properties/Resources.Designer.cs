@@ -263,6 +263,16 @@ namespace GUI_QuanLy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_edit_user_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-edit-user-24", resourceCulture);
@@ -276,6 +286,16 @@ namespace GUI_QuanLy.Properties {
         internal static System.Drawing.Bitmap icons8_edit_user_241 {
             get {
                 object obj = ResourceManager.GetObject("icons8-edit-user-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_excel_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-excel-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,16 @@ namespace GUI_QuanLy.Properties {
         internal static System.Drawing.Bitmap icons8_pay_by_cash_241 {
             get {
                 object obj = ResourceManager.GetObject("icons8-pay-by-cash-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pdf_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-pdf-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

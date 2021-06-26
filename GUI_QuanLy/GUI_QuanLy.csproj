@@ -132,6 +132,12 @@
     <Compile Include="RoomType\RoomTypeForm.Designer.cs">
       <DependentUpon>RoomTypeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Room\RoomDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room\RoomDetailForm.Designer.cs">
+      <DependentUpon>RoomDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Room\RoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </Compile>
     <EmbeddedResource Include="RoomType\RoomTypeForm.resx">
       <DependentUpon>RoomTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room\RoomDetailForm.resx">
+      <DependentUpon>RoomDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Room\RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
@@ -326,6 +335,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-add-property-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pdf-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-microsoft-excel-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

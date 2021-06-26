@@ -117,7 +117,10 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.nudMaxCustomers);
             this.Controls.Add(this.lbMaxCustomers);
+            this.MaximumSize = new System.Drawing.Size(459, 174);
+            this.MinimumSize = new System.Drawing.Size(459, 174);
             this.Name = "MaxCustomerEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SỐ KHÁCH TỐI ĐA MỖI PHÒNG";
             this.Load += new System.EventHandler(this.MaxCustomerEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudMaxCustomers)).EndInit();

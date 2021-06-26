@@ -17,51 +17,44 @@ namespace BUS_QuanLy
         }
         public static bool InsertRoomDetail(RoomDetailDTO room)
         {
-            if (RoomDAO.CheckRoomByID(room.RoomID) || string.IsNullOrWhiteSpace(room.RoomID))
-            {
-                return false;
-            }
             return RoomDetailDAO.InsertRoomDetail(room);
         }
         public static bool UpdateRoomDetail(RoomDetailDTO room)
         {
-            if (RoomDAO.CheckRentedRoomByID(room.RoomID))
-            {
-                return false;
-            }
             return RoomDetailDAO.UpdateRoomDetail(room);
         }
-        public static bool DeleteRoomDetail(string RoomID)
+        public static bool DeleteRoomDetail(string RoomID, int ID)
         {
-            if (RoomDAO.CheckRentedRoomByID(RoomID))
-            {
-                return false;
-            }
-            return RoomDetailDAO.DeleteRoomDetail(RoomID);
+            return RoomDetailDAO.DeleteRoomDetail(RoomID,ID);
         }
         
         //khach hang
         public static DataTable GetRoomDetailListCustomer(string RoomId)
         {
-            return RoomDetailDAO.GetRoomDetailList(RoomId);
+            return RoomDetailDAO.GetRoomDetailListCustomer(RoomId);
         }
         public static bool RoomDetail_InsertCustomer(string RoomId, string CMND, int MA_LOAI_KHACH, string TEN_KHACH, string DIA_CHI)
         {
-            if (RoomDAO.CheckRoomByID(RoomId) || string.IsNullOrWhiteSpace(RoomId))
-            {
-                return false;
-            }
             return RoomDetailDAO.RoomDetail_InsertCustomer(RoomId,  CMND,  MA_LOAI_KHACH,  TEN_KHACH,  DIA_CHI);
+
+        }
+        public static bool RoomDetail_UpdateCustomer(string RoomId, string CMND, int MA_LOAI_KHACH, string TEN_KHACH, string DIA_CHI, string cmnd_old)
+        {
+            return RoomDetailDAO.RoomDetail_UpdateCustomer(RoomId, CMND, MA_LOAI_KHACH, TEN_KHACH, DIA_CHI, cmnd_old);
 
         }
         public static bool RoomDetail_DeleteCustomer(string RoomId, string CMND)
         {
-            if (RoomDAO.CheckRoomByID(RoomId) || string.IsNullOrWhiteSpace(RoomId))
-            {
-                return false;
-            }
             return RoomDetailDAO.RoomDetail_DeleteCustomer(RoomId,  CMND);
 
+        }
+        public static DataTable GetListCustomer()
+        {
+            return RoomDetailDAO.GetListCustomer();
+        }
+        public static DataTable GetInfoCustomerByCMND(string CMND)
+        {
+            return RoomDetailDAO.GetInfoCustomerByCMND(CMND);
         }
     }
 }

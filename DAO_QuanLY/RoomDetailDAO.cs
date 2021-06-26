@@ -21,7 +21,7 @@ namespace DAO_QuanLY
                 {
                     connection.Open();
                 }
-                var query = $"SELECT * FROM CT_PHONG WHERE ROOM_ID='{RoomId}' AND IS_DELETE=0";
+                var query = $"SELECT * FROM CT_PHONG WHERE ROOM_ID='{RoomId}' ";
 
                 var command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
@@ -67,6 +67,37 @@ namespace DAO_QuanLY
                 connection.Close();
             }
         }
+
+        public static DataTable GetInfoCustomerByCMND(string cMND)
+        {
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+                var query = $"SELECT CTPT.MaPTP, CMND, MaloaiKhachHang, CTPT.KhachHang, DiaChi FROM CTPT"
+                        + " LEFT JOIN PHIEUTHUE ON CTPT.MaPTP=PHIEUTHUE.MaPTP"
+                        + " WHERE SoHD IS NULL AND CMND=N'" + cMND + "'";
+
+                var command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+
+                var dt = new DataTable();
+                var adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public static bool UpdateRoomDetail(RoomDetailDTO room)
         {
             try
@@ -81,6 +112,7 @@ namespace DAO_QuanLY
                 command.Parameters.Add(new SqlParameter("@ROOM_ID", room.RoomID));
                 command.Parameters.Add(new SqlParameter("@HONG_VAT_TU", room.HONG_VAT_TU));
                 command.Parameters.Add(new SqlParameter("@SUA_VAT_TU", room.SUA_VAT_TU));
+                command.Parameters.Add(new SqlParameter("@ID", room.ID));
 
                 command.ExecuteNonQuery();
                 return true;
@@ -94,7 +126,7 @@ namespace DAO_QuanLY
                 connection.Close();
             }
         }
-        public static bool DeleteRoomDetail(string RoomID)
+        public static bool DeleteRoomDetail(string RoomID, int ID)
         {
             try
             {
@@ -103,7 +135,7 @@ namespace DAO_QuanLY
                     connection.Open();
                 }
 
-                var query = $"DELETE CT_PHONG WHERE ROOM_ID = '{RoomID}'";
+                var query = $"DELETE CT_PHONG WHERE ROOM_ID = '{RoomID}' AND ID={ID}";
                 var command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 return true;
@@ -172,7 +204,7 @@ namespace DAO_QuanLY
                 connection.Close();
             }
         }
-        public static bool RoomDetail_UpdateCustomer(string RoomId, string CMND, int MA_LOAI_KHACH, string TEN_KHACH, string DIA_CHI)
+        public static bool RoomDetail_UpdateCustomer(string RoomId, string CMND, int MA_LOAI_KHACH, string TEN_KHACH, string DIA_CHI, string CMND_OLD)
         {
             try
             {
@@ -188,6 +220,7 @@ namespace DAO_QuanLY
                 command.Parameters.Add(new SqlParameter("@MA_LOAI_KHACH", MA_LOAI_KHACH));
                 command.Parameters.Add(new SqlParameter("@NAME", TEN_KHACH));
                 command.Parameters.Add(new SqlParameter("@DIACHI", DIA_CHI));
+                command.Parameters.Add(new SqlParameter("@CMND_OLD", CMND_OLD));
                 command.ExecuteNonQuery();
                 return true;
             }
@@ -219,6 +252,35 @@ namespace DAO_QuanLY
             catch
             {
                 return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        public static DataTable GetListCustomer()
+        {
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+                var query = $"SELECT CMND,  CTPT.KhachHang FROM CTPT"
+                        + " LEFT JOIN PHIEUTHUE ON CTPT.MaPTP=PHIEUTHUE.MaPTP"
+                        + " WHERE SoHD IS NULL";
+
+                var command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+
+                var dt = new DataTable();
+                var adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
             }
             finally
             {

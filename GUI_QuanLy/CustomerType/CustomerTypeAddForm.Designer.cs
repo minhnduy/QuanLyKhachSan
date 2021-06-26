@@ -47,7 +47,7 @@
             this.imgAddRoomType.Appearance.Options.UseFont = true;
             this.imgAddRoomType.Appearance.Options.UseImage = true;
             this.imgAddRoomType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.imgAddRoomType.Location = new System.Drawing.Point(69, 16);
+            this.imgAddRoomType.Location = new System.Drawing.Point(4, -1);
             this.imgAddRoomType.Margin = new System.Windows.Forms.Padding(2);
             this.imgAddRoomType.Name = "imgAddRoomType";
             this.imgAddRoomType.Size = new System.Drawing.Size(0, 13);
@@ -55,11 +55,10 @@
             // 
             // lbEditCustomerTypeHeader
             // 
-            this.lbEditCustomerTypeHeader.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbEditCustomerTypeHeader.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold);
             this.lbEditCustomerTypeHeader.Appearance.Options.UseFont = true;
             this.lbEditCustomerTypeHeader.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbEditCustomerTypeHeader.Location = new System.Drawing.Point(105, 24);
+            this.lbEditCustomerTypeHeader.Location = new System.Drawing.Point(23, 11);
             this.lbEditCustomerTypeHeader.Margin = new System.Windows.Forms.Padding(2);
             this.lbEditCustomerTypeHeader.Name = "lbEditCustomerTypeHeader";
             this.lbEditCustomerTypeHeader.Size = new System.Drawing.Size(311, 24);
@@ -68,13 +67,12 @@
             // 
             // lbRoomTypePrice
             // 
-            this.lbRoomTypePrice.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbRoomTypePrice.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbRoomTypePrice.Appearance.Options.UseFont = true;
             this.lbRoomTypePrice.Appearance.Options.UseTextOptions = true;
             this.lbRoomTypePrice.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lbRoomTypePrice.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbRoomTypePrice.Location = new System.Drawing.Point(105, 66);
+            this.lbRoomTypePrice.Location = new System.Drawing.Point(23, 53);
             this.lbRoomTypePrice.Margin = new System.Windows.Forms.Padding(2);
             this.lbRoomTypePrice.Name = "lbRoomTypePrice";
             this.lbRoomTypePrice.Size = new System.Drawing.Size(65, 13);
@@ -83,8 +81,7 @@
             // 
             // tbCustomerType
             // 
-            this.tbCustomerType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbCustomerType.Location = new System.Drawing.Point(175, 63);
+            this.tbCustomerType.Location = new System.Drawing.Point(93, 50);
             this.tbCustomerType.Margin = new System.Windows.Forms.Padding(2);
             this.tbCustomerType.MaxLength = 30;
             this.tbCustomerType.Name = "tbCustomerType";
@@ -93,13 +90,12 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseTextOptions = true;
             this.labelControl1.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.labelControl1.Location = new System.Drawing.Point(123, 96);
+            this.labelControl1.Location = new System.Drawing.Point(41, 83);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(47, 13);
@@ -109,7 +105,7 @@
             // 
             // nudSurchagePercent
             // 
-            this.nudSurchagePercent.Location = new System.Drawing.Point(175, 94);
+            this.nudSurchagePercent.Location = new System.Drawing.Point(93, 81);
             this.nudSurchagePercent.Maximum = new decimal(new int[] {
             200,
             0,
@@ -121,12 +117,11 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConfirm.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnConfirm.Appearance.Options.UseFont = true;
             this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnConfirm.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_add;
-            this.btnConfirm.Location = new System.Drawing.Point(105, 137);
+            this.btnConfirm.Location = new System.Drawing.Point(53, 115);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -137,12 +132,11 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.cancel_32x32;
             this.btnCancel.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancel.Location = new System.Drawing.Point(241, 137);
+            this.btnCancel.Location = new System.Drawing.Point(189, 115);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -154,7 +148,7 @@
             // lbPercentage
             // 
             this.lbPercentage.AutoSize = true;
-            this.lbPercentage.Location = new System.Drawing.Point(277, 101);
+            this.lbPercentage.Location = new System.Drawing.Point(195, 88);
             this.lbPercentage.Name = "lbPercentage";
             this.lbPercentage.Size = new System.Drawing.Size(21, 13);
             this.lbPercentage.TabIndex = 86;
@@ -164,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 204);
+            this.ClientSize = new System.Drawing.Size(349, 170);
             this.Controls.Add(this.lbPercentage);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
@@ -174,7 +168,11 @@
             this.Controls.Add(this.lbRoomTypePrice);
             this.Controls.Add(this.lbEditCustomerTypeHeader);
             this.Controls.Add(this.imgAddRoomType);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(365, 209);
+            this.MinimumSize = new System.Drawing.Size(365, 209);
             this.Name = "CustomerTypeAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "THÊM THÔNG TIN LOẠI KHÁCH";
             this.Load += new System.EventHandler(this.CustomerTypeAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSurchagePercent)).EndInit();

@@ -115,7 +115,10 @@
             this.Controls.Add(this.lbPercentage);
             this.Controls.Add(this.nudTaxPercent);
             this.Controls.Add(this.lbThirdCustomerTax);
+            this.MaximumSize = new System.Drawing.Size(457, 171);
+            this.MinimumSize = new System.Drawing.Size(457, 171);
             this.Name = "OverCustomerTaxEditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PHỤ THU KHÁCH THÊM";
             ((System.ComponentModel.ISupportInitialize)(this.nudTaxPercent)).EndInit();
             this.ResumeLayout(false);
