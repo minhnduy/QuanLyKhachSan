@@ -136,6 +136,18 @@ namespace DAO_QuanLY
                 }
 
                 var query = $"DELETE CT_PHONG WHERE ROOM_ID = '{RoomID}' AND ID={ID}";
+                query = query + $" declare @COUNTS as int";
+                query = query + $" select @COUNTS = COUNT(ID) FROM CT_PHONG WHERE ROOM_ID='{RoomID}' AND HONG_VAT_TU=''";
+                query = query + $" declare @COUNTH as int";
+                query = query + $" select @COUNTH = COUNT(ID) FROM CT_PHONG WHERE ROOM_ID='{RoomID}' AND SUA_VAT_TU=''";
+                query = query + $" IF @COUNTS=0";
+                query = query + $" BEGIN";
+                query = query + $" UPDATE PHONG SET MaTinhTrang='PHTR' WHERE MaPhong='{RoomID}'";
+                query = query + $" END";
+                query = query + $" IF @COUNTH=0";
+                query = query + $" BEGIN";
+                query = query + $" UPDATE PHONG SET MaTinhTrang='PHTR' WHERE MaPhong='{RoomID}'";
+                query = query + $" END";
                 var command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 return true;

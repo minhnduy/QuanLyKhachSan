@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillDetailForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbBillAddress = new System.Windows.Forms.TextBox();
@@ -517,6 +518,7 @@
             this.ClientSize = new System.Drawing.Size(750, 544);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(766, 583);
             this.MinimumSize = new System.Drawing.Size(766, 583);
             this.Name = "BillDetailForm";

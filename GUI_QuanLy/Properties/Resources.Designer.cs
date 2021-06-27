@@ -233,6 +233,16 @@ namespace GUI_QuanLy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bill_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bill-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_bin_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-bin-24", resourceCulture);
@@ -293,6 +303,56 @@ namespace GUI_QuanLy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_estimate_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-estimate-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_gear_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gear-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_graph_report_script_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-graph-report-script-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_hotel_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-hotel-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_list_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-list-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_microsoft_excel_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-microsoft-excel-24", resourceCulture);
@@ -306,6 +366,16 @@ namespace GUI_QuanLy.Properties {
         internal static System.Drawing.Bitmap icons8_more_details_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-more-details-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_package_search_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-package-search-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

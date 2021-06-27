@@ -70,6 +70,36 @@ namespace DAO_QuanLY
                 connection.Close();
             }
         }
+
+        public static DataTable GetDataForReportByMonth(string month, string year)
+        {
+            try
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    connection.Open();
+                }
+
+                var command = new SqlCommand("GetDataForReportByMonthAndYear", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Add(new SqlParameter("@month", month));
+                command.Parameters.Add(new SqlParameter("@year", year));
+                command.ExecuteNonQuery();
+                var dt = new DataTable();
+                var adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
         public static bool InsertRoom(RoomDTO room)
         {
             try

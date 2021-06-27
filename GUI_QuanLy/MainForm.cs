@@ -16,7 +16,12 @@ using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Linq;
-
+using GUI_QuanLy.Report;
+using DevExpress.XtraReports.UI;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraReports.UI;
+using DevExpress.LookAndFeel;
+using DevExpress.XtraPrinting.Caching;
 namespace GUI_QuanLy
 {
     public partial class MainForm : DevExpress.XtraEditors.XtraForm
@@ -867,6 +872,7 @@ namespace GUI_QuanLy
                 }
                 this.cbAddBillRoomID.SelectedIndex = 0;
                 this.btnLockBill.Enabled = false;
+                this.cbCustumerList.Enabled = false;
             }
         }
 
@@ -888,12 +894,17 @@ namespace GUI_QuanLy
 
         public void cbCustomerListLoad()
         {
+            this.cbCustumerList.Enabled = true;
             DataTable dt = RoomDetailBUS.GetListCustomer();
-            if (dt != null)
+            if (dt.Rows.Count!=0)
             {
                 this.cbCustumerList.DataSource = dt;
                 this.cbCustumerList.DisplayMember = dt.Columns[1].ColumnName.ToString();
                 this.cbCustumerList.ValueMember = dt.Columns[0].ColumnName.ToString();
+            }
+            else
+            {
+                this.cbCustumerList.Enabled = false;
             }
         }
 
@@ -1266,6 +1277,15 @@ namespace GUI_QuanLy
 
         private void btnOutPDF_Click(object sender, EventArgs e)
         {
+            var storage = new MemoryDocumentStorage();
+            var report = new DEMO();
+            DataTable dt = RoomBUS.GetDataForReportByMonth(cbRevenueMonth.SelectedItem.ToString(), cbRevenueYear.SelectedItem.ToString());
+            report.DataSource = dt;
+            var cachedReportSource = new CachedReportSource(report, storage);
+
+            ReportPrintTool printTool = new ReportPrintTool(cachedReportSource);
+
+            printTool.ShowPreviewDialog(UserLookAndFeel.Default);
 
         }
 

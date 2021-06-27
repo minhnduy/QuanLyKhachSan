@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaxCustomerEditForm));
             this.lbMaxCustomers = new DevExpress.XtraEditors.LabelControl();
             this.nudMaxCustomers = new System.Windows.Forms.NumericUpDown();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -117,6 +118,7 @@
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.nudMaxCustomers);
             this.Controls.Add(this.lbMaxCustomers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(459, 174);
             this.MinimumSize = new System.Drawing.Size(459, 174);
             this.Name = "MaxCustomerEditForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerTypeAddForm));
             this.imgAddRoomType = new DevExpress.XtraEditors.LabelControl();
             this.lbEditCustomerTypeHeader = new DevExpress.XtraEditors.LabelControl();
             this.lbRoomTypePrice = new DevExpress.XtraEditors.LabelControl();
@@ -168,6 +169,7 @@
             this.Controls.Add(this.lbRoomTypePrice);
             this.Controls.Add(this.lbEditCustomerTypeHeader);
             this.Controls.Add(this.imgAddRoomType);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(365, 209);
             this.MinimumSize = new System.Drawing.Size(365, 209);

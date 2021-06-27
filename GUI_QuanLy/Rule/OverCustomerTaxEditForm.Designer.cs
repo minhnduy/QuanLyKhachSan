@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OverCustomerTaxEditForm));
             this.lbThirdCustomerTax = new DevExpress.XtraEditors.LabelControl();
             this.nudTaxPercent = new System.Windows.Forms.NumericUpDown();
             this.lbPercentage = new System.Windows.Forms.Label();
@@ -115,6 +116,7 @@
             this.Controls.Add(this.lbPercentage);
             this.Controls.Add(this.nudTaxPercent);
             this.Controls.Add(this.lbThirdCustomerTax);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(457, 171);
             this.MinimumSize = new System.Drawing.Size(457, 171);
             this.Name = "OverCustomerTaxEditForm";

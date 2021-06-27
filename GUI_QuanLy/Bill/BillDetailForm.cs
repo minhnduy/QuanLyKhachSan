@@ -159,6 +159,7 @@ namespace GUI_QuanLy.Bill
                 mainForm.ReLoadAvailableRoom();
                 mainForm.ReCreateBill();
                 mainForm.ReLoadRoomReport();
+                mainForm.cbCustomerListLoad();
 
                 MessageBox.Show(
                     "Thanh toán hoá đơn thành công",

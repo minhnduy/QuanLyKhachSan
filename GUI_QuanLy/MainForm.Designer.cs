@@ -93,13 +93,13 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.btnFindRoom = new DevExpress.XtraEditors.SimpleButton();
             this.cbFindRoomStatus = new System.Windows.Forms.ComboBox();
-            this.cbFindRoomPrice = new System.Windows.Forms.ComboBox();
             this.cbFindRoomType = new System.Windows.Forms.ComboBox();
             this.cbFindRoomID = new System.Windows.Forms.ComboBox();
             this.lbFindRoomStatus = new DevExpress.XtraEditors.LabelControl();
-            this.lbFindRoomPrice = new DevExpress.XtraEditors.LabelControl();
             this.lbFindRoomType = new DevExpress.XtraEditors.LabelControl();
             this.lbFindRoomID = new DevExpress.XtraEditors.LabelControl();
+            this.cbFindRoomPrice = new System.Windows.Forms.ComboBox();
+            this.lbFindRoomPrice = new DevExpress.XtraEditors.LabelControl();
             this.gcRoomList = new DevExpress.XtraEditors.GroupControl();
             this.dgvFindRoom = new System.Windows.Forms.DataGridView();
             this.FindRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -176,19 +176,18 @@
             this.ReportedRoomPercentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnOutPDF = new DevExpress.XtraEditors.SimpleButton();
-            this.btnOutExcel = new DevExpress.XtraEditors.SimpleButton();
             this.tabRoomRules = new DevExpress.XtraTab.XtraTabPage();
             this.gcCustomerTypeList = new DevExpress.XtraEditors.GroupControl();
-            this.btnEditCustomerType = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelCustomerType = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditCustomerType = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddCustomerType = new DevExpress.XtraEditors.SimpleButton();
             this.dgvCustomerType = new System.Windows.Forms.DataGridView();
             this.EditCustomerTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditCustomerTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerSurcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcRoomTypeList = new DevExpress.XtraEditors.GroupControl();
-            this.btnEditRoomType = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelRoomType = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEditRoomType = new DevExpress.XtraEditors.SimpleButton();
             this.btnAddRoomType = new DevExpress.XtraEditors.SimpleButton();
             this.dgvRoomType = new System.Windows.Forms.DataGridView();
             this.EditRoomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -297,8 +296,9 @@
             // tabListRoom
             // 
             this.tabListRoom.Controls.Add(this.tableLayoutPanel2);
+            this.tabListRoom.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_list_24;
             this.tabListRoom.Name = "tabListRoom";
-            this.tabListRoom.Size = new System.Drawing.Size(934, 668);
+            this.tabListRoom.Size = new System.Drawing.Size(934, 657);
             this.tabListRoom.Text = "DANH MỤC PHÒNG";
             // 
             // tableLayoutPanel2
@@ -313,9 +313,9 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 220F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 668);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(934, 657);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // gcRoomData
@@ -340,17 +340,17 @@
             // rtbListRoomNote
             // 
             this.rtbListRoomNote.BackColor = System.Drawing.SystemColors.Control;
-            this.rtbListRoomNote.Location = new System.Drawing.Point(108, 137);
+            this.rtbListRoomNote.Location = new System.Drawing.Point(107, 105);
             this.rtbListRoomNote.Name = "rtbListRoomNote";
             this.rtbListRoomNote.ReadOnly = true;
-            this.rtbListRoomNote.Size = new System.Drawing.Size(491, 72);
+            this.rtbListRoomNote.Size = new System.Drawing.Size(491, 48);
             this.rtbListRoomNote.TabIndex = 9;
             this.rtbListRoomNote.Text = "";
             // 
             // lbListRoomNote
             // 
             this.lbListRoomNote.AutoSize = true;
-            this.lbListRoomNote.Location = new System.Drawing.Point(29, 137);
+            this.lbListRoomNote.Location = new System.Drawing.Point(28, 105);
             this.lbListRoomNote.Name = "lbListRoomNote";
             this.lbListRoomNote.Size = new System.Drawing.Size(53, 13);
             this.lbListRoomNote.TabIndex = 8;
@@ -359,7 +359,7 @@
             // tbListRoomPrice
             // 
             this.tbListRoomPrice.BackColor = System.Drawing.SystemColors.Control;
-            this.tbListRoomPrice.Location = new System.Drawing.Point(436, 85);
+            this.tbListRoomPrice.Location = new System.Drawing.Point(436, 70);
             this.tbListRoomPrice.Name = "tbListRoomPrice";
             this.tbListRoomPrice.ReadOnly = true;
             this.tbListRoomPrice.Size = new System.Drawing.Size(163, 21);
@@ -377,7 +377,7 @@
             // lbListRoomPrice
             // 
             this.lbListRoomPrice.AutoSize = true;
-            this.lbListRoomPrice.Location = new System.Drawing.Point(375, 90);
+            this.lbListRoomPrice.Location = new System.Drawing.Point(375, 74);
             this.lbListRoomPrice.Name = "lbListRoomPrice";
             this.lbListRoomPrice.Size = new System.Drawing.Size(55, 13);
             this.lbListRoomPrice.TabIndex = 5;
@@ -386,7 +386,7 @@
             // lbListRoomType
             // 
             this.lbListRoomType.AutoSize = true;
-            this.lbListRoomType.Location = new System.Drawing.Point(357, 41);
+            this.lbListRoomType.Location = new System.Drawing.Point(357, 42);
             this.lbListRoomType.Name = "lbListRoomType";
             this.lbListRoomType.Size = new System.Drawing.Size(73, 13);
             this.lbListRoomType.TabIndex = 4;
@@ -395,7 +395,7 @@
             // tbListRoomStatus
             // 
             this.tbListRoomStatus.BackColor = System.Drawing.SystemColors.Control;
-            this.tbListRoomStatus.Location = new System.Drawing.Point(107, 90);
+            this.tbListRoomStatus.Location = new System.Drawing.Point(107, 70);
             this.tbListRoomStatus.Name = "tbListRoomStatus";
             this.tbListRoomStatus.ReadOnly = true;
             this.tbListRoomStatus.Size = new System.Drawing.Size(163, 21);
@@ -413,7 +413,7 @@
             // lbListRoomStatus
             // 
             this.lbListRoomStatus.AutoSize = true;
-            this.lbListRoomStatus.Location = new System.Drawing.Point(29, 93);
+            this.lbListRoomStatus.Location = new System.Drawing.Point(29, 74);
             this.lbListRoomStatus.Name = "lbListRoomStatus";
             this.lbListRoomStatus.Size = new System.Drawing.Size(72, 13);
             this.lbListRoomStatus.TabIndex = 1;
@@ -422,7 +422,7 @@
             // lbListRoomID
             // 
             this.lbListRoomID.AutoSize = true;
-            this.lbListRoomID.Location = new System.Drawing.Point(55, 41);
+            this.lbListRoomID.Location = new System.Drawing.Point(55, 42);
             this.lbListRoomID.Name = "lbListRoomID";
             this.lbListRoomID.Size = new System.Drawing.Size(46, 13);
             this.lbListRoomID.TabIndex = 0;
@@ -435,7 +435,7 @@
             this.gcListRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcListRoom.Location = new System.Drawing.Point(3, 223);
             this.gcListRoom.Name = "gcListRoom";
-            this.gcListRoom.Size = new System.Drawing.Size(928, 442);
+            this.gcListRoom.Size = new System.Drawing.Size(928, 431);
             this.gcListRoom.TabIndex = 2;
             this.gcListRoom.Text = "DANH MỤC PHÒNG";
             // 
@@ -460,7 +460,7 @@
             this.dgvListRoom.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListRoom.RowTemplate.Height = 24;
             this.dgvListRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListRoom.Size = new System.Drawing.Size(924, 417);
+            this.dgvListRoom.Size = new System.Drawing.Size(924, 406);
             this.dgvListRoom.TabIndex = 2;
             this.dgvListRoom.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListRoom_CellEnter);
             this.dgvListRoom.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
@@ -526,7 +526,7 @@
             this.btnDeleteRoom.Appearance.Options.UseFont = true;
             this.btnDeleteRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDeleteRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteRoom.ImageOptions.SvgImage")));
-            this.btnDeleteRoom.Location = new System.Drawing.Point(52, 146);
+            this.btnDeleteRoom.Location = new System.Drawing.Point(52, 114);
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnDeleteRoom.Size = new System.Drawing.Size(90, 40);
@@ -541,7 +541,7 @@
             this.btnEditRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnEditRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditRoom.ImageOptions.SvgImage")));
             this.btnEditRoom.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.CommonPalette;
-            this.btnEditRoom.Location = new System.Drawing.Point(52, 93);
+            this.btnEditRoom.Location = new System.Drawing.Point(52, 71);
             this.btnEditRoom.Name = "btnEditRoom";
             this.btnEditRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnEditRoom.Size = new System.Drawing.Size(90, 40);
@@ -555,7 +555,7 @@
             this.btnAddRoom.Appearance.Options.UseFont = true;
             this.btnAddRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddRoom.ImageOptions.SvgImage")));
-            this.btnAddRoom.Location = new System.Drawing.Point(52, 38);
+            this.btnAddRoom.Location = new System.Drawing.Point(52, 28);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnAddRoom.Size = new System.Drawing.Size(90, 40);
@@ -566,8 +566,9 @@
             // tabRoomLease
             // 
             this.tabRoomLease.Controls.Add(this.tableLayoutPanel1);
+            this.tabRoomLease.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_bill_24;
             this.tabRoomLease.Name = "tabRoomLease";
-            this.tabRoomLease.Size = new System.Drawing.Size(934, 668);
+            this.tabRoomLease.Size = new System.Drawing.Size(934, 657);
             this.tabRoomLease.Text = "LẬP PHIẾU THUÊ PHÒNG";
             // 
             // tableLayoutPanel1
@@ -585,10 +586,10 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(934, 668);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(934, 657);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // gcUpdateCustomer
@@ -599,7 +600,7 @@
             this.gcUpdateCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcUpdateCustomer.Location = new System.Drawing.Point(723, 3);
             this.gcUpdateCustomer.Name = "gcUpdateCustomer";
-            this.gcUpdateCustomer.Size = new System.Drawing.Size(208, 208);
+            this.gcUpdateCustomer.Size = new System.Drawing.Size(208, 174);
             this.gcUpdateCustomer.TabIndex = 2;
             this.gcUpdateCustomer.Text = "HIỆU CHỈNH KHÁCH";
             // 
@@ -612,7 +613,7 @@
             this.btnDeleteCustomer.Enabled = false;
             this.btnDeleteCustomer.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDeleteCustomer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDeleteCustomer.ImageOptions.SvgImage")));
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(54, 150);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(54, 115);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnDeleteCustomer.Size = new System.Drawing.Size(95, 40);
@@ -629,7 +630,7 @@
             this.btnEditCustomer.Enabled = false;
             this.btnEditCustomer.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnEditCustomer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnEditCustomer.ImageOptions.SvgImage")));
-            this.btnEditCustomer.Location = new System.Drawing.Point(54, 97);
+            this.btnEditCustomer.Location = new System.Drawing.Point(54, 73);
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnEditCustomer.Size = new System.Drawing.Size(95, 40);
@@ -646,7 +647,7 @@
             this.btnAddCustomer.Enabled = false;
             this.btnAddCustomer.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddCustomer.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAddCustomer.ImageOptions.SvgImage")));
-            this.btnAddCustomer.Location = new System.Drawing.Point(54, 42);
+            this.btnAddCustomer.Location = new System.Drawing.Point(54, 31);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnAddCustomer.Size = new System.Drawing.Size(95, 40);
@@ -667,14 +668,14 @@
             this.gcCustomerLease.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcCustomerLease.Location = new System.Drawing.Point(291, 3);
             this.gcCustomerLease.Name = "gcCustomerLease";
-            this.gcCustomerLease.Size = new System.Drawing.Size(426, 208);
+            this.gcCustomerLease.Size = new System.Drawing.Size(426, 174);
             this.gcCustomerLease.TabIndex = 1;
             this.gcCustomerLease.Text = "THÔNG TIN KHÁCH";
             // 
             // tbCustomerType
             // 
             this.tbCustomerType.Enabled = false;
-            this.tbCustomerType.Location = new System.Drawing.Point(78, 79);
+            this.tbCustomerType.Location = new System.Drawing.Point(78, 73);
             this.tbCustomerType.Name = "tbCustomerType";
             this.tbCustomerType.ReadOnly = true;
             this.tbCustomerType.Size = new System.Drawing.Size(109, 21);
@@ -683,7 +684,7 @@
             // rtbCustomerAddress
             // 
             this.rtbCustomerAddress.Enabled = false;
-            this.rtbCustomerAddress.Location = new System.Drawing.Point(78, 130);
+            this.rtbCustomerAddress.Location = new System.Drawing.Point(78, 109);
             this.rtbCustomerAddress.Name = "rtbCustomerAddress";
             this.rtbCustomerAddress.ReadOnly = true;
             this.rtbCustomerAddress.Size = new System.Drawing.Size(287, 60);
@@ -693,7 +694,7 @@
             // tbCustomerID
             // 
             this.tbCustomerID.Enabled = false;
-            this.tbCustomerID.Location = new System.Drawing.Point(239, 79);
+            this.tbCustomerID.Location = new System.Drawing.Point(239, 73);
             this.tbCustomerID.Name = "tbCustomerID";
             this.tbCustomerID.ReadOnly = true;
             this.tbCustomerID.Size = new System.Drawing.Size(126, 21);
@@ -711,7 +712,7 @@
             // lbCustomerAddress
             // 
             this.lbCustomerAddress.AutoSize = true;
-            this.lbCustomerAddress.Location = new System.Drawing.Point(21, 130);
+            this.lbCustomerAddress.Location = new System.Drawing.Point(21, 110);
             this.lbCustomerAddress.Name = "lbCustomerAddress";
             this.lbCustomerAddress.Size = new System.Drawing.Size(51, 13);
             this.lbCustomerAddress.TabIndex = 5;
@@ -721,7 +722,7 @@
             // 
             this.lbCustomerID.AutoSize = true;
             this.lbCustomerID.Enabled = false;
-            this.lbCustomerID.Location = new System.Drawing.Point(193, 82);
+            this.lbCustomerID.Location = new System.Drawing.Point(193, 77);
             this.lbCustomerID.Name = "lbCustomerID";
             this.lbCustomerID.Size = new System.Drawing.Size(40, 13);
             this.lbCustomerID.TabIndex = 4;
@@ -730,7 +731,7 @@
             // lbCustomerType
             // 
             this.lbCustomerType.AutoSize = true;
-            this.lbCustomerType.Location = new System.Drawing.Point(5, 83);
+            this.lbCustomerType.Location = new System.Drawing.Point(5, 75);
             this.lbCustomerType.Name = "lbCustomerType";
             this.lbCustomerType.Size = new System.Drawing.Size(72, 13);
             this.lbCustomerType.TabIndex = 3;
@@ -750,9 +751,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.gcLeaseCustomerData, 3);
             this.gcLeaseCustomerData.Controls.Add(this.dgvLeaseCustomer);
             this.gcLeaseCustomerData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcLeaseCustomerData.Location = new System.Drawing.Point(3, 217);
+            this.gcLeaseCustomerData.Location = new System.Drawing.Point(3, 183);
             this.gcLeaseCustomerData.Name = "gcLeaseCustomerData";
-            this.gcLeaseCustomerData.Size = new System.Drawing.Size(928, 393);
+            this.gcLeaseCustomerData.Size = new System.Drawing.Size(928, 416);
             this.gcLeaseCustomerData.TabIndex = 3;
             this.gcLeaseCustomerData.Text = "DANH SÁCH KHÁCH";
             // 
@@ -772,7 +773,7 @@
             this.dgvLeaseCustomer.Location = new System.Drawing.Point(2, 23);
             this.dgvLeaseCustomer.Name = "dgvLeaseCustomer";
             this.dgvLeaseCustomer.ReadOnly = true;
-            this.dgvLeaseCustomer.Size = new System.Drawing.Size(924, 368);
+            this.dgvLeaseCustomer.Size = new System.Drawing.Size(924, 391);
             this.dgvLeaseCustomer.TabIndex = 3;
             this.dgvLeaseCustomer.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLeaseCustomer_CellEnter);
             this.dgvLeaseCustomer.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLeaseCustomer_CellValueChanged);
@@ -827,14 +828,13 @@
             this.gcRoomLease.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoomLease.Location = new System.Drawing.Point(3, 3);
             this.gcRoomLease.Name = "gcRoomLease";
-            this.gcRoomLease.Size = new System.Drawing.Size(282, 208);
+            this.gcRoomLease.Size = new System.Drawing.Size(282, 174);
             this.gcRoomLease.TabIndex = 0;
             this.gcRoomLease.Text = "CHỌN PHÒNG THUÊ";
             // 
             // tbLeaseRoomPrice
             // 
-            this.tbLeaseRoomPrice.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbLeaseRoomPrice.Location = new System.Drawing.Point(80, 135);
+            this.tbLeaseRoomPrice.Location = new System.Drawing.Point(80, 121);
             this.tbLeaseRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLeaseRoomPrice.Name = "tbLeaseRoomPrice";
             this.tbLeaseRoomPrice.ReadOnly = true;
@@ -844,9 +844,8 @@
             // 
             // deLeaseRoomDate
             // 
-            this.deLeaseRoomDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.deLeaseRoomDate.EditValue = null;
-            this.deLeaseRoomDate.Location = new System.Drawing.Point(80, 97);
+            this.deLeaseRoomDate.Location = new System.Drawing.Point(80, 83);
             this.deLeaseRoomDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deLeaseRoomDate.Name = "deLeaseRoomDate";
             this.deLeaseRoomDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -860,10 +859,9 @@
             // 
             // cbLeaseRoomID
             // 
-            this.cbLeaseRoomID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbLeaseRoomID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLeaseRoomID.FormattingEnabled = true;
-            this.cbLeaseRoomID.Location = new System.Drawing.Point(80, 54);
+            this.cbLeaseRoomID.Location = new System.Drawing.Point(80, 40);
             this.cbLeaseRoomID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLeaseRoomID.Name = "cbLeaseRoomID";
             this.cbLeaseRoomID.Size = new System.Drawing.Size(114, 21);
@@ -879,7 +877,7 @@
             this.btnLockRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLockRoom.ImageOptions.SvgImage")));
             this.btnLockRoom.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.Full;
             this.btnLockRoom.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnLockRoom.Location = new System.Drawing.Point(202, 74);
+            this.btnLockRoom.Location = new System.Drawing.Point(202, 58);
             this.btnLockRoom.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.btnLockRoom.LookAndFeel.UseWindowsXPTheme = true;
             this.btnLockRoom.Name = "btnLockRoom";
@@ -893,7 +891,7 @@
             // lbRoomPrice
             // 
             this.lbRoomPrice.AutoSize = true;
-            this.lbRoomPrice.Location = new System.Drawing.Point(19, 141);
+            this.lbRoomPrice.Location = new System.Drawing.Point(19, 128);
             this.lbRoomPrice.Name = "lbRoomPrice";
             this.lbRoomPrice.Size = new System.Drawing.Size(55, 13);
             this.lbRoomPrice.TabIndex = 3;
@@ -902,7 +900,7 @@
             // lbRoomDate
             // 
             this.lbRoomDate.AutoSize = true;
-            this.lbRoomDate.Location = new System.Drawing.Point(7, 101);
+            this.lbRoomDate.Location = new System.Drawing.Point(7, 88);
             this.lbRoomDate.Name = "lbRoomDate";
             this.lbRoomDate.Size = new System.Drawing.Size(67, 13);
             this.lbRoomDate.TabIndex = 2;
@@ -911,7 +909,7 @@
             // lbRoomList
             // 
             this.lbRoomList.AutoSize = true;
-            this.lbRoomList.Location = new System.Drawing.Point(28, 57);
+            this.lbRoomList.Location = new System.Drawing.Point(28, 44);
             this.lbRoomList.Name = "lbRoomList";
             this.lbRoomList.Size = new System.Drawing.Size(46, 13);
             this.lbRoomList.TabIndex = 1;
@@ -923,7 +921,7 @@
             this.panel3.Controls.Add(this.btnCreateLease);
             this.panel3.Controls.Add(this.btnCancelLease);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(291, 616);
+            this.panel3.Location = new System.Drawing.Point(291, 605);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(640, 49);
             this.panel3.TabIndex = 4;
@@ -963,8 +961,9 @@
             // tabRoomFind
             // 
             this.tabRoomFind.Controls.Add(this.tableLayoutPanel3);
+            this.tabRoomFind.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_package_search_24;
             this.tabRoomFind.Name = "tabRoomFind";
-            this.tabRoomFind.Size = new System.Drawing.Size(934, 668);
+            this.tabRoomFind.Size = new System.Drawing.Size(934, 657);
             this.tabRoomFind.Text = "TRA CỨU PHÒNG";
             // 
             // tableLayoutPanel3
@@ -980,11 +979,10 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(934, 668);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(934, 657);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // gcFindRoom
@@ -994,7 +992,7 @@
             this.gcFindRoom.Controls.Add(this.panelControl1);
             this.gcFindRoom.Location = new System.Drawing.Point(3, 3);
             this.gcFindRoom.Name = "gcFindRoom";
-            this.gcFindRoom.Size = new System.Drawing.Size(367, 161);
+            this.gcFindRoom.Size = new System.Drawing.Size(367, 145);
             this.gcFindRoom.TabIndex = 0;
             this.gcFindRoom.Text = "TÌM KIẾM PHÒNG";
             // 
@@ -1002,13 +1000,13 @@
             // 
             this.panelControl1.Controls.Add(this.btnFindRoom);
             this.panelControl1.Controls.Add(this.cbFindRoomStatus);
-            this.panelControl1.Controls.Add(this.cbFindRoomPrice);
             this.panelControl1.Controls.Add(this.cbFindRoomType);
             this.panelControl1.Controls.Add(this.cbFindRoomID);
             this.panelControl1.Controls.Add(this.lbFindRoomStatus);
-            this.panelControl1.Controls.Add(this.lbFindRoomPrice);
             this.panelControl1.Controls.Add(this.lbFindRoomType);
             this.panelControl1.Controls.Add(this.lbFindRoomID);
+            this.panelControl1.Controls.Add(this.cbFindRoomPrice);
+            this.panelControl1.Controls.Add(this.lbFindRoomPrice);
             this.panelControl1.Location = new System.Drawing.Point(2, 23);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(363, 136);
@@ -1020,7 +1018,7 @@
             this.btnFindRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFindRoom.ImageOptions.SvgImage")));
             this.btnFindRoom.ImageOptions.SvgImageColorizationMode = DevExpress.Utils.SvgImageColorizationMode.Full;
             this.btnFindRoom.ImageOptions.SvgImageSize = new System.Drawing.Size(50, 50);
-            this.btnFindRoom.Location = new System.Drawing.Point(260, 28);
+            this.btnFindRoom.Location = new System.Drawing.Point(255, 24);
             this.btnFindRoom.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.btnFindRoom.LookAndFeel.UseWindowsXPTheme = true;
             this.btnFindRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1034,28 +1032,17 @@
             // 
             this.cbFindRoomStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFindRoomStatus.FormattingEnabled = true;
-            this.cbFindRoomStatus.Location = new System.Drawing.Point(99, 98);
+            this.cbFindRoomStatus.Location = new System.Drawing.Point(108, 79);
             this.cbFindRoomStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFindRoomStatus.Name = "cbFindRoomStatus";
             this.cbFindRoomStatus.Size = new System.Drawing.Size(117, 21);
             this.cbFindRoomStatus.TabIndex = 22;
             // 
-            // cbFindRoomPrice
-            // 
-            this.cbFindRoomPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFindRoomPrice.FormattingEnabled = true;
-            this.cbFindRoomPrice.Location = new System.Drawing.Point(99, 68);
-            this.cbFindRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbFindRoomPrice.Name = "cbFindRoomPrice";
-            this.cbFindRoomPrice.Size = new System.Drawing.Size(117, 21);
-            this.cbFindRoomPrice.TabIndex = 21;
-            this.cbFindRoomPrice.Visible = false;
-            // 
             // cbFindRoomType
             // 
             this.cbFindRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFindRoomType.FormattingEnabled = true;
-            this.cbFindRoomType.Location = new System.Drawing.Point(99, 38);
+            this.cbFindRoomType.Location = new System.Drawing.Point(108, 49);
             this.cbFindRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFindRoomType.Name = "cbFindRoomType";
             this.cbFindRoomType.Size = new System.Drawing.Size(117, 21);
@@ -1065,7 +1052,7 @@
             // 
             this.cbFindRoomID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFindRoomID.FormattingEnabled = true;
-            this.cbFindRoomID.Location = new System.Drawing.Point(99, 8);
+            this.cbFindRoomID.Location = new System.Drawing.Point(108, 19);
             this.cbFindRoomID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFindRoomID.Name = "cbFindRoomID";
             this.cbFindRoomID.Size = new System.Drawing.Size(117, 21);
@@ -1076,32 +1063,19 @@
             this.lbFindRoomStatus.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbFindRoomStatus.Appearance.Options.UseFont = true;
             this.lbFindRoomStatus.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbFindRoomStatus.Location = new System.Drawing.Point(19, 102);
+            this.lbFindRoomStatus.Location = new System.Drawing.Point(28, 83);
             this.lbFindRoomStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbFindRoomStatus.Name = "lbFindRoomStatus";
             this.lbFindRoomStatus.Size = new System.Drawing.Size(65, 13);
             this.lbFindRoomStatus.TabIndex = 18;
             this.lbFindRoomStatus.Text = "TÌNH TRẠNG:";
             // 
-            // lbFindRoomPrice
-            // 
-            this.lbFindRoomPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.lbFindRoomPrice.Appearance.Options.UseFont = true;
-            this.lbFindRoomPrice.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbFindRoomPrice.Location = new System.Drawing.Point(36, 72);
-            this.lbFindRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbFindRoomPrice.Name = "lbFindRoomPrice";
-            this.lbFindRoomPrice.Size = new System.Drawing.Size(48, 13);
-            this.lbFindRoomPrice.TabIndex = 17;
-            this.lbFindRoomPrice.Text = "ĐƠN GIÁ:";
-            this.lbFindRoomPrice.Visible = false;
-            // 
             // lbFindRoomType
             // 
             this.lbFindRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbFindRoomType.Appearance.Options.UseFont = true;
             this.lbFindRoomType.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbFindRoomType.Location = new System.Drawing.Point(18, 42);
+            this.lbFindRoomType.Location = new System.Drawing.Point(27, 53);
             this.lbFindRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbFindRoomType.Name = "lbFindRoomType";
             this.lbFindRoomType.Size = new System.Drawing.Size(66, 13);
@@ -1113,12 +1087,36 @@
             this.lbFindRoomID.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbFindRoomID.Appearance.Options.UseFont = true;
             this.lbFindRoomID.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbFindRoomID.Location = new System.Drawing.Point(45, 12);
+            this.lbFindRoomID.Location = new System.Drawing.Point(54, 23);
             this.lbFindRoomID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbFindRoomID.Name = "lbFindRoomID";
             this.lbFindRoomID.Size = new System.Drawing.Size(39, 13);
             this.lbFindRoomID.TabIndex = 15;
             this.lbFindRoomID.Text = "PHÒNG:";
+            // 
+            // cbFindRoomPrice
+            // 
+            this.cbFindRoomPrice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFindRoomPrice.FormattingEnabled = true;
+            this.cbFindRoomPrice.Location = new System.Drawing.Point(108, 79);
+            this.cbFindRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbFindRoomPrice.Name = "cbFindRoomPrice";
+            this.cbFindRoomPrice.Size = new System.Drawing.Size(117, 21);
+            this.cbFindRoomPrice.TabIndex = 21;
+            this.cbFindRoomPrice.Visible = false;
+            // 
+            // lbFindRoomPrice
+            // 
+            this.lbFindRoomPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.lbFindRoomPrice.Appearance.Options.UseFont = true;
+            this.lbFindRoomPrice.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.lbFindRoomPrice.Location = new System.Drawing.Point(45, 83);
+            this.lbFindRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbFindRoomPrice.Name = "lbFindRoomPrice";
+            this.lbFindRoomPrice.Size = new System.Drawing.Size(48, 13);
+            this.lbFindRoomPrice.TabIndex = 17;
+            this.lbFindRoomPrice.Text = "ĐƠN GIÁ:";
+            this.lbFindRoomPrice.Visible = false;
             // 
             // gcRoomList
             // 
@@ -1127,7 +1125,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.gcRoomList, 2);
             this.gcRoomList.Controls.Add(this.dgvFindRoom);
-            this.gcRoomList.Location = new System.Drawing.Point(3, 170);
+            this.gcRoomList.Location = new System.Drawing.Point(3, 154);
             this.gcRoomList.Name = "gcRoomList";
             this.gcRoomList.Size = new System.Drawing.Size(928, 261);
             this.gcRoomList.TabIndex = 2;
@@ -1204,7 +1202,7 @@
             this.gcFindroomData.Controls.Add(this.panelControl2);
             this.gcFindroomData.Location = new System.Drawing.Point(376, 3);
             this.gcFindroomData.Name = "gcFindroomData";
-            this.gcFindroomData.Size = new System.Drawing.Size(555, 161);
+            this.gcFindroomData.Size = new System.Drawing.Size(555, 145);
             this.gcFindroomData.TabIndex = 1;
             this.gcFindroomData.Text = "THÔNG TIN PHÒNG";
             // 
@@ -1223,7 +1221,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(2, 23);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(551, 136);
+            this.panelControl2.Size = new System.Drawing.Size(551, 120);
             this.panelControl2.TabIndex = 0;
             // 
             // tbFindRoomStatus
@@ -1252,7 +1250,7 @@
             this.rtbFindRoomNote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbFindRoomNote.Name = "rtbFindRoomNote";
             this.rtbFindRoomNote.ReadOnly = true;
-            this.rtbFindRoomNote.Size = new System.Drawing.Size(334, 51);
+            this.rtbFindRoomNote.Size = new System.Drawing.Size(334, 42);
             this.rtbFindRoomNote.TabIndex = 31;
             this.rtbFindRoomNote.TabStop = false;
             this.rtbFindRoomNote.Text = "";
@@ -1342,9 +1340,9 @@
             this.tableLayoutPanel3.SetColumnSpan(this.gcRoomDetail, 2);
             this.gcRoomDetail.Controls.Add(this.panel2);
             this.gcRoomDetail.Controls.Add(this.panel1);
-            this.gcRoomDetail.Location = new System.Drawing.Point(3, 437);
+            this.gcRoomDetail.Location = new System.Drawing.Point(3, 429);
             this.gcRoomDetail.Name = "gcRoomDetail";
-            this.gcRoomDetail.Size = new System.Drawing.Size(928, 228);
+            this.gcRoomDetail.Size = new System.Drawing.Size(928, 225);
             this.gcRoomDetail.TabIndex = 3;
             this.gcRoomDetail.Text = "groupControl1";
             // 
@@ -1354,7 +1352,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(2, 23);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(790, 203);
+            this.panel2.Size = new System.Drawing.Size(790, 200);
             this.panel2.TabIndex = 19;
             // 
             // dvRoomDetail
@@ -1366,7 +1364,7 @@
             this.dvRoomDetail.MultiSelect = false;
             this.dvRoomDetail.Name = "dvRoomDetail";
             this.dvRoomDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvRoomDetail.Size = new System.Drawing.Size(790, 203);
+            this.dvRoomDetail.Size = new System.Drawing.Size(790, 200);
             this.dvRoomDetail.TabIndex = 17;
             // 
             // panel1
@@ -1377,7 +1375,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(798, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(128, 203);
+            this.panel1.Size = new System.Drawing.Size(128, 200);
             this.panel1.TabIndex = 18;
             // 
             // btnRoomDetailRemove
@@ -1387,7 +1385,7 @@
             this.btnRoomDetailRemove.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnRoomDetailRemove.Appearance.Options.UseFont = true;
             this.btnRoomDetailRemove.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_delete_bin_24;
-            this.btnRoomDetailRemove.Location = new System.Drawing.Point(23, 140);
+            this.btnRoomDetailRemove.Location = new System.Drawing.Point(23, 137);
             this.btnRoomDetailRemove.Name = "btnRoomDetailRemove";
             this.btnRoomDetailRemove.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRoomDetailRemove.Size = new System.Drawing.Size(79, 41);
@@ -1402,7 +1400,7 @@
             this.btnRoomDetailAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnRoomDetailAdd.Appearance.Options.UseFont = true;
             this.btnRoomDetailAdd.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_add_property_24;
-            this.btnRoomDetailAdd.Location = new System.Drawing.Point(23, 14);
+            this.btnRoomDetailAdd.Location = new System.Drawing.Point(23, 11);
             this.btnRoomDetailAdd.Name = "btnRoomDetailAdd";
             this.btnRoomDetailAdd.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRoomDetailAdd.Size = new System.Drawing.Size(79, 41);
@@ -1417,7 +1415,7 @@
             this.btnRoomDetailEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnRoomDetailEdit.Appearance.Options.UseFont = true;
             this.btnRoomDetailEdit.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_edit_24;
-            this.btnRoomDetailEdit.Location = new System.Drawing.Point(23, 61);
+            this.btnRoomDetailEdit.Location = new System.Drawing.Point(23, 58);
             this.btnRoomDetailEdit.Name = "btnRoomDetailEdit";
             this.btnRoomDetailEdit.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRoomDetailEdit.Size = new System.Drawing.Size(79, 41);
@@ -1428,8 +1426,9 @@
             // tabRoomBill
             // 
             this.tabRoomBill.Controls.Add(this.tableLayoutPanel4);
+            this.tabRoomBill.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_estimate_24;
             this.tabRoomBill.Name = "tabRoomBill";
-            this.tabRoomBill.Size = new System.Drawing.Size(934, 668);
+            this.tabRoomBill.Size = new System.Drawing.Size(934, 657);
             this.tabRoomBill.Text = "THANH TOÁN HÓA ĐƠN";
             // 
             // tableLayoutPanel4
@@ -1437,23 +1436,21 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.46091F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.53909F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
             this.tableLayoutPanel4.Controls.Add(this.gcRoomBill, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.gcBill, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.gcRoomBillData, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.gcAddRoomBill, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnCancelBillRoom, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.btnCreateBillRoom, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.btnCancelBillRoom, 2, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.81818F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.18182F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(934, 668);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.80406F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.19595F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(934, 657);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // gcRoomBill
@@ -1461,9 +1458,9 @@
             this.tableLayoutPanel4.SetColumnSpan(this.gcRoomBill, 3);
             this.gcRoomBill.Controls.Add(this.dgvBillRoom);
             this.gcRoomBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcRoomBill.Location = new System.Drawing.Point(3, 202);
+            this.gcRoomBill.Location = new System.Drawing.Point(3, 167);
             this.gcRoomBill.Name = "gcRoomBill";
-            this.gcRoomBill.Size = new System.Drawing.Size(928, 422);
+            this.gcRoomBill.Size = new System.Drawing.Size(928, 441);
             this.gcRoomBill.TabIndex = 3;
             this.gcRoomBill.Text = "DANH MỤC THANH TOÁN";
             // 
@@ -1488,7 +1485,7 @@
             this.dgvBillRoom.ReadOnly = true;
             this.dgvBillRoom.RowTemplate.Height = 24;
             this.dgvBillRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBillRoom.Size = new System.Drawing.Size(924, 397);
+            this.dgvBillRoom.Size = new System.Drawing.Size(924, 416);
             this.dgvBillRoom.TabIndex = 3;
             this.dgvBillRoom.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvBillRoom_CellEnter);
             this.dgvBillRoom.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
@@ -1543,6 +1540,8 @@
             // 
             // gcBill
             // 
+            this.gcBill.Appearance.BackColor = System.Drawing.Color.AliceBlue;
+            this.gcBill.Appearance.Options.UseBackColor = true;
             this.gcBill.Controls.Add(this.cbCustumerList);
             this.gcBill.Controls.Add(this.btnLockBill);
             this.gcBill.Controls.Add(this.rtbBillCustomerAddress);
@@ -1554,14 +1553,14 @@
             this.gcBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcBill.Location = new System.Drawing.Point(3, 3);
             this.gcBill.Name = "gcBill";
-            this.gcBill.Size = new System.Drawing.Size(358, 193);
+            this.gcBill.Size = new System.Drawing.Size(352, 158);
             this.gcBill.TabIndex = 0;
             this.gcBill.Text = "THÔNG TIN THANH TOÁN";
             // 
             // cbCustumerList
             // 
             this.cbCustumerList.FormattingEnabled = true;
-            this.cbCustumerList.Location = new System.Drawing.Point(86, 47);
+            this.cbCustumerList.Location = new System.Drawing.Point(86, 34);
             this.cbCustumerList.Name = "cbCustumerList";
             this.cbCustumerList.Size = new System.Drawing.Size(157, 21);
             this.cbCustumerList.TabIndex = 28;
@@ -1575,7 +1574,7 @@
             this.btnLockBill.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLockBill.ImageOptions.SvgImage")));
             this.btnLockBill.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
             this.btnLockBill.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLockBill.Location = new System.Drawing.Point(256, 55);
+            this.btnLockBill.Location = new System.Drawing.Point(256, 42);
             this.btnLockBill.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnLockBill.Margin = new System.Windows.Forms.Padding(0);
             this.btnLockBill.Name = "btnLockBill";
@@ -1590,7 +1589,7 @@
             // 
             this.rtbBillCustomerAddress.BackColor = System.Drawing.SystemColors.Window;
             this.rtbBillCustomerAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtbBillCustomerAddress.Location = new System.Drawing.Point(86, 103);
+            this.rtbBillCustomerAddress.Location = new System.Drawing.Point(86, 90);
             this.rtbBillCustomerAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rtbBillCustomerAddress.Name = "rtbBillCustomerAddress";
             this.rtbBillCustomerAddress.Size = new System.Drawing.Size(157, 53);
@@ -1600,7 +1599,7 @@
             // deBillDate
             // 
             this.deBillDate.EditValue = null;
-            this.deBillDate.Location = new System.Drawing.Point(86, 78);
+            this.deBillDate.Location = new System.Drawing.Point(86, 65);
             this.deBillDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deBillDate.Name = "deBillDate";
             this.deBillDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1617,7 +1616,7 @@
             this.lbBillCustomerAddress.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillCustomerAddress.Appearance.Options.UseFont = true;
             this.lbBillCustomerAddress.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillCustomerAddress.Location = new System.Drawing.Point(36, 105);
+            this.lbBillCustomerAddress.Location = new System.Drawing.Point(36, 92);
             this.lbBillCustomerAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillCustomerAddress.Name = "lbBillCustomerAddress";
             this.lbBillCustomerAddress.Size = new System.Drawing.Size(44, 13);
@@ -1629,7 +1628,7 @@
             this.lbBillDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillDate.Appearance.Options.UseFont = true;
             this.lbBillDate.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillDate.Location = new System.Drawing.Point(26, 81);
+            this.lbBillDate.Location = new System.Drawing.Point(26, 68);
             this.lbBillDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillDate.Name = "lbBillDate";
             this.lbBillDate.Size = new System.Drawing.Size(54, 13);
@@ -1643,7 +1642,7 @@
             this.lbBillCustomerName.Appearance.Options.UseTextOptions = true;
             this.lbBillCustomerName.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lbBillCustomerName.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillCustomerName.Location = new System.Drawing.Point(20, 41);
+            this.lbBillCustomerName.Location = new System.Drawing.Point(20, 28);
             this.lbBillCustomerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillCustomerName.Name = "lbBillCustomerName";
             this.lbBillCustomerName.Size = new System.Drawing.Size(60, 26);
@@ -1652,7 +1651,7 @@
             // 
             // tbBillCustomerName
             // 
-            this.tbBillCustomerName.Location = new System.Drawing.Point(86, 46);
+            this.tbBillCustomerName.Location = new System.Drawing.Point(86, 33);
             this.tbBillCustomerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbBillCustomerName.MaxLength = 30;
             this.tbBillCustomerName.Name = "tbBillCustomerName";
@@ -1671,9 +1670,9 @@
             this.gcRoomBillData.Controls.Add(this.lbBillRoomDay);
             this.gcRoomBillData.Controls.Add(this.lbBillRoomID);
             this.gcRoomBillData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcRoomBillData.Location = new System.Drawing.Point(367, 3);
+            this.gcRoomBillData.Location = new System.Drawing.Point(361, 3);
             this.gcRoomBillData.Name = "gcRoomBillData";
-            this.gcRoomBillData.Size = new System.Drawing.Size(366, 193);
+            this.gcRoomBillData.Size = new System.Drawing.Size(360, 158);
             this.gcRoomBillData.TabIndex = 1;
             this.gcRoomBillData.Text = "THÔNG TIN PHÒNG";
             // 
@@ -1685,7 +1684,7 @@
             this.btnDelBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnDelBillRoom.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnDelBillRoom.ImageOptions.SvgImage")));
             this.btnDelBillRoom.ImageOptions.SvgImageSize = new System.Drawing.Size(40, 40);
-            this.btnDelBillRoom.Location = new System.Drawing.Point(261, 51);
+            this.btnDelBillRoom.Location = new System.Drawing.Point(261, 49);
             this.btnDelBillRoom.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnDelBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelBillRoom.Name = "btnDelBillRoom";
@@ -1697,7 +1696,7 @@
             // 
             // tbBillRoomCost
             // 
-            this.tbBillRoomCost.Location = new System.Drawing.Point(96, 144);
+            this.tbBillRoomCost.Location = new System.Drawing.Point(96, 126);
             this.tbBillRoomCost.Name = "tbBillRoomCost";
             this.tbBillRoomCost.ReadOnly = true;
             this.tbBillRoomCost.Size = new System.Drawing.Size(117, 21);
@@ -1706,7 +1705,7 @@
             // 
             // tbBillRoomPrice
             // 
-            this.tbBillRoomPrice.Location = new System.Drawing.Point(96, 111);
+            this.tbBillRoomPrice.Location = new System.Drawing.Point(96, 95);
             this.tbBillRoomPrice.Name = "tbBillRoomPrice";
             this.tbBillRoomPrice.ReadOnly = true;
             this.tbBillRoomPrice.Size = new System.Drawing.Size(117, 21);
@@ -1715,7 +1714,7 @@
             // 
             // tbBillRoomDay
             // 
-            this.tbBillRoomDay.Location = new System.Drawing.Point(96, 77);
+            this.tbBillRoomDay.Location = new System.Drawing.Point(96, 64);
             this.tbBillRoomDay.Name = "tbBillRoomDay";
             this.tbBillRoomDay.ReadOnly = true;
             this.tbBillRoomDay.Size = new System.Drawing.Size(117, 21);
@@ -1724,7 +1723,7 @@
             // 
             // tbBillRoomID
             // 
-            this.tbBillRoomID.Location = new System.Drawing.Point(96, 38);
+            this.tbBillRoomID.Location = new System.Drawing.Point(96, 33);
             this.tbBillRoomID.Name = "tbBillRoomID";
             this.tbBillRoomID.ReadOnly = true;
             this.tbBillRoomID.Size = new System.Drawing.Size(117, 21);
@@ -1736,7 +1735,7 @@
             this.lbBillRoomCost.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillRoomCost.Appearance.Options.UseFont = true;
             this.lbBillRoomCost.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillRoomCost.Location = new System.Drawing.Point(26, 147);
+            this.lbBillRoomCost.Location = new System.Drawing.Point(26, 129);
             this.lbBillRoomCost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillRoomCost.Name = "lbBillRoomCost";
             this.lbBillRoomCost.Size = new System.Drawing.Size(64, 13);
@@ -1748,7 +1747,7 @@
             this.lbBillRoomPrice.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillRoomPrice.Appearance.Options.UseFont = true;
             this.lbBillRoomPrice.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillRoomPrice.Location = new System.Drawing.Point(42, 114);
+            this.lbBillRoomPrice.Location = new System.Drawing.Point(42, 98);
             this.lbBillRoomPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillRoomPrice.Name = "lbBillRoomPrice";
             this.lbBillRoomPrice.Size = new System.Drawing.Size(48, 13);
@@ -1760,7 +1759,7 @@
             this.lbBillRoomDay.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillRoomDay.Appearance.Options.UseFont = true;
             this.lbBillRoomDay.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillRoomDay.Location = new System.Drawing.Point(13, 80);
+            this.lbBillRoomDay.Location = new System.Drawing.Point(13, 67);
             this.lbBillRoomDay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillRoomDay.Name = "lbBillRoomDay";
             this.lbBillRoomDay.Size = new System.Drawing.Size(77, 13);
@@ -1772,7 +1771,7 @@
             this.lbBillRoomID.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbBillRoomID.Appearance.Options.UseFont = true;
             this.lbBillRoomID.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbBillRoomID.Location = new System.Drawing.Point(51, 41);
+            this.lbBillRoomID.Location = new System.Drawing.Point(51, 36);
             this.lbBillRoomID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbBillRoomID.Name = "lbBillRoomID";
             this.lbBillRoomID.Size = new System.Drawing.Size(39, 13);
@@ -1785,9 +1784,9 @@
             this.gcAddRoomBill.Controls.Add(this.cbAddBillRoomID);
             this.gcAddRoomBill.Controls.Add(this.lbAddBillRoomID);
             this.gcAddRoomBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcAddRoomBill.Location = new System.Drawing.Point(739, 3);
+            this.gcAddRoomBill.Location = new System.Drawing.Point(727, 3);
             this.gcAddRoomBill.Name = "gcAddRoomBill";
-            this.gcAddRoomBill.Size = new System.Drawing.Size(192, 193);
+            this.gcAddRoomBill.Size = new System.Drawing.Size(204, 158);
             this.gcAddRoomBill.TabIndex = 2;
             this.gcAddRoomBill.Text = "THÊM PHÒNG TRẢ";
             // 
@@ -1798,11 +1797,11 @@
             this.btnAddBillRoom.Enabled = false;
             this.btnAddBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_add;
-            this.btnAddBillRoom.Location = new System.Drawing.Point(49, 101);
+            this.btnAddBillRoom.Location = new System.Drawing.Point(51, 95);
             this.btnAddBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddBillRoom.Name = "btnAddBillRoom";
             this.btnAddBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnAddBillRoom.Size = new System.Drawing.Size(97, 64);
+            this.btnAddBillRoom.Size = new System.Drawing.Size(97, 45);
             this.btnAddBillRoom.TabIndex = 24;
             this.btnAddBillRoom.Text = "THÊM";
             this.btnAddBillRoom.Click += new System.EventHandler(this.btnAddBillRoom_Click);
@@ -1812,7 +1811,7 @@
             this.cbAddBillRoomID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAddBillRoomID.Enabled = false;
             this.cbAddBillRoomID.FormattingEnabled = true;
-            this.cbAddBillRoomID.Location = new System.Drawing.Point(38, 72);
+            this.cbAddBillRoomID.Location = new System.Drawing.Point(38, 67);
             this.cbAddBillRoomID.Name = "cbAddBillRoomID";
             this.cbAddBillRoomID.Size = new System.Drawing.Size(120, 21);
             this.cbAddBillRoomID.Sorted = true;
@@ -1832,13 +1831,13 @@
             // 
             // btnCancelBillRoom
             // 
-            this.btnCancelBillRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelBillRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnCancelBillRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCancelBillRoom.Appearance.Options.UseFont = true;
             this.btnCancelBillRoom.Enabled = false;
             this.btnCancelBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCancelBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.removegroupheader;
-            this.btnCancelBillRoom.Location = new System.Drawing.Point(739, 631);
+            this.btnCancelBillRoom.Location = new System.Drawing.Point(727, 616);
             this.btnCancelBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelBillRoom.Name = "btnCancelBillRoom";
             this.btnCancelBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1849,13 +1848,13 @@
             // 
             // btnCreateBillRoom
             // 
-            this.btnCreateBillRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCreateBillRoom.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCreateBillRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnCreateBillRoom.Appearance.Options.UseFont = true;
             this.btnCreateBillRoom.Enabled = false;
             this.btnCreateBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCreateBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.insertgroupheader;
-            this.btnCreateBillRoom.Location = new System.Drawing.Point(573, 631);
+            this.btnCreateBillRoom.Location = new System.Drawing.Point(561, 616);
             this.btnCreateBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateBillRoom.Name = "btnCreateBillRoom";
             this.btnCreateBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1867,8 +1866,9 @@
             // tabMonthReport
             // 
             this.tabMonthReport.Controls.Add(this.tableLayoutPanel5);
+            this.tabMonthReport.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_graph_report_script_24;
             this.tabMonthReport.Name = "tabMonthReport";
-            this.tabMonthReport.Size = new System.Drawing.Size(934, 668);
+            this.tabMonthReport.Size = new System.Drawing.Size(934, 657);
             this.tabMonthReport.Text = "BÁO CÁO DOANH THU";
             // 
             // tableLayoutPanel5
@@ -1885,7 +1885,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(934, 668);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(934, 657);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // gcMonthReportSelect
@@ -1898,7 +1898,7 @@
             this.gcMonthReportSelect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcMonthReportSelect.Location = new System.Drawing.Point(3, 3);
             this.gcMonthReportSelect.Name = "gcMonthReportSelect";
-            this.gcMonthReportSelect.Size = new System.Drawing.Size(928, 118);
+            this.gcMonthReportSelect.Size = new System.Drawing.Size(928, 116);
             this.gcMonthReportSelect.TabIndex = 0;
             this.gcMonthReportSelect.Text = "TRA CỨU DOANG THU";
             // 
@@ -1919,7 +1919,7 @@
             "10",
             "11",
             "12"});
-            this.cbRevenueYear.Location = new System.Drawing.Point(389, 62);
+            this.cbRevenueYear.Location = new System.Drawing.Point(389, 60);
             this.cbRevenueYear.Name = "cbRevenueYear";
             this.cbRevenueYear.Size = new System.Drawing.Size(74, 21);
             this.cbRevenueYear.TabIndex = 7;
@@ -1929,7 +1929,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.labelControl1.Location = new System.Drawing.Point(338, 66);
+            this.labelControl1.Location = new System.Drawing.Point(338, 64);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(26, 13);
@@ -1942,7 +1942,7 @@
             this.btnCreateMonthRevenue.Appearance.Options.UseFont = true;
             this.btnCreateMonthRevenue.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.converttorange_32x32;
             this.btnCreateMonthRevenue.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCreateMonthRevenue.Location = new System.Drawing.Point(488, 52);
+            this.btnCreateMonthRevenue.Location = new System.Drawing.Point(488, 50);
             this.btnCreateMonthRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateMonthRevenue.Name = "btnCreateMonthRevenue";
             this.btnCreateMonthRevenue.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1968,7 +1968,7 @@
             "10",
             "11",
             "12"});
-            this.cbRevenueMonth.Location = new System.Drawing.Point(192, 62);
+            this.cbRevenueMonth.Location = new System.Drawing.Point(192, 60);
             this.cbRevenueMonth.Name = "cbRevenueMonth";
             this.cbRevenueMonth.Size = new System.Drawing.Size(121, 21);
             this.cbRevenueMonth.TabIndex = 4;
@@ -1978,7 +1978,7 @@
             this.lbMonthRevenue.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbMonthRevenue.Appearance.Options.UseFont = true;
             this.lbMonthRevenue.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbMonthRevenue.Location = new System.Drawing.Point(67, 66);
+            this.lbMonthRevenue.Location = new System.Drawing.Point(67, 64);
             this.lbMonthRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbMonthRevenue.Name = "lbMonthRevenue";
             this.lbMonthRevenue.Size = new System.Drawing.Size(100, 13);
@@ -1989,9 +1989,9 @@
             // 
             this.gcMonthReportList.Controls.Add(this.dgvRevenueList);
             this.gcMonthReportList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcMonthReportList.Location = new System.Drawing.Point(3, 127);
+            this.gcMonthReportList.Location = new System.Drawing.Point(3, 125);
             this.gcMonthReportList.Name = "gcMonthReportList";
-            this.gcMonthReportList.Size = new System.Drawing.Size(928, 492);
+            this.gcMonthReportList.Size = new System.Drawing.Size(928, 483);
             this.gcMonthReportList.TabIndex = 1;
             this.gcMonthReportList.Text = "DANH MỤC DOANH THU";
             // 
@@ -2011,7 +2011,7 @@
             this.dgvRevenueList.ReadOnly = true;
             this.dgvRevenueList.RowTemplate.Height = 24;
             this.dgvRevenueList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRevenueList.Size = new System.Drawing.Size(924, 467);
+            this.dgvRevenueList.Size = new System.Drawing.Size(924, 458);
             this.dgvRevenueList.TabIndex = 3;
             // 
             // ReportedRoomType
@@ -2041,10 +2041,8 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnOutPDF);
-            this.panel4.Controls.Add(this.btnOutExcel);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Enabled = false;
-            this.panel4.Location = new System.Drawing.Point(3, 625);
+            this.panel4.Location = new System.Drawing.Point(3, 614);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(928, 40);
             this.panel4.TabIndex = 2;
@@ -2064,57 +2062,27 @@
             this.btnOutPDF.Text = "Xuất Báo Cáo PDF";
             this.btnOutPDF.Click += new System.EventHandler(this.btnOutPDF_Click);
             // 
-            // btnOutExcel
-            // 
-            this.btnOutExcel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnOutExcel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnOutExcel.Appearance.Options.UseFont = true;
-            this.btnOutExcel.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_microsoft_excel_24;
-            this.btnOutExcel.Location = new System.Drawing.Point(619, 6);
-            this.btnOutExcel.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
-            this.btnOutExcel.Name = "btnOutExcel";
-            this.btnOutExcel.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnOutExcel.Size = new System.Drawing.Size(142, 29);
-            this.btnOutExcel.TabIndex = 3;
-            this.btnOutExcel.Text = "Xuất Báo Cáo Excel";
-            this.btnOutExcel.Click += new System.EventHandler(this.btnOutExcel_Click);
-            // 
             // tabRoomRules
             // 
             this.tabRoomRules.Controls.Add(this.gcCustomerTypeList);
             this.tabRoomRules.Controls.Add(this.gcRoomTypeList);
             this.tabRoomRules.Controls.Add(this.gcEditRule);
+            this.tabRoomRules.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_gear_24;
             this.tabRoomRules.Name = "tabRoomRules";
-            this.tabRoomRules.Size = new System.Drawing.Size(934, 668);
+            this.tabRoomRules.Size = new System.Drawing.Size(934, 657);
             this.tabRoomRules.Text = "THAY ĐỔI QUY ĐỊNH";
             // 
             // gcCustomerTypeList
             // 
-            this.gcCustomerTypeList.Controls.Add(this.btnEditCustomerType);
             this.gcCustomerTypeList.Controls.Add(this.btnDelCustomerType);
+            this.gcCustomerTypeList.Controls.Add(this.btnEditCustomerType);
             this.gcCustomerTypeList.Controls.Add(this.btnAddCustomerType);
             this.gcCustomerTypeList.Controls.Add(this.dgvCustomerType);
-            this.gcCustomerTypeList.Location = new System.Drawing.Point(469, 221);
+            this.gcCustomerTypeList.Location = new System.Drawing.Point(243, 3);
             this.gcCustomerTypeList.Name = "gcCustomerTypeList";
-            this.gcCustomerTypeList.Size = new System.Drawing.Size(460, 417);
+            this.gcCustomerTypeList.Size = new System.Drawing.Size(688, 313);
             this.gcCustomerTypeList.TabIndex = 2;
             this.gcCustomerTypeList.Text = "DANH MỤC CÁC LOẠI KHÁCH";
-            // 
-            // btnEditCustomerType
-            // 
-            this.btnEditCustomerType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEditCustomerType.Appearance.Options.UseFont = true;
-            this.btnEditCustomerType.Appearance.Options.UseImage = true;
-            this.btnEditCustomerType.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_edit_user_241;
-            this.btnEditCustomerType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnEditCustomerType.Location = new System.Drawing.Point(307, 372);
-            this.btnEditCustomerType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditCustomerType.Name = "btnEditCustomerType";
-            this.btnEditCustomerType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnEditCustomerType.Size = new System.Drawing.Size(134, 41);
-            this.btnEditCustomerType.TabIndex = 6;
-            this.btnEditCustomerType.Text = "SỬA LOẠI KHÁCH";
-            this.btnEditCustomerType.Click += new System.EventHandler(this.btnEditCustomerType_Click);
             // 
             // btnDelCustomerType
             // 
@@ -2123,14 +2091,29 @@
             this.btnDelCustomerType.Appearance.Options.UseImage = true;
             this.btnDelCustomerType.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_denied_24;
             this.btnDelCustomerType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDelCustomerType.Location = new System.Drawing.Point(153, 372);
+            this.btnDelCustomerType.Location = new System.Drawing.Point(502, 162);
             this.btnDelCustomerType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelCustomerType.Name = "btnDelCustomerType";
             this.btnDelCustomerType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnDelCustomerType.Size = new System.Drawing.Size(148, 41);
-            this.btnDelCustomerType.TabIndex = 5;
+            this.btnDelCustomerType.Size = new System.Drawing.Size(141, 41);
+            this.btnDelCustomerType.TabIndex = 7;
             this.btnDelCustomerType.Text = "XOÁ LOẠI KHÁCH";
-            this.btnDelCustomerType.Click += new System.EventHandler(this.btnDelCustomerType_Click);
+            // 
+            // btnEditCustomerType
+            // 
+            this.btnEditCustomerType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEditCustomerType.Appearance.Options.UseFont = true;
+            this.btnEditCustomerType.Appearance.Options.UseImage = true;
+            this.btnEditCustomerType.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_edit_user_241;
+            this.btnEditCustomerType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnEditCustomerType.Location = new System.Drawing.Point(502, 108);
+            this.btnEditCustomerType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditCustomerType.Name = "btnEditCustomerType";
+            this.btnEditCustomerType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnEditCustomerType.Size = new System.Drawing.Size(141, 41);
+            this.btnEditCustomerType.TabIndex = 6;
+            this.btnEditCustomerType.Text = "SỬA LOẠI KHÁCH";
+            this.btnEditCustomerType.Click += new System.EventHandler(this.btnEditCustomerType_Click);
             // 
             // btnAddCustomerType
             // 
@@ -2140,11 +2123,11 @@
             this.btnAddCustomerType.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_add_user_male_24;
             this.btnAddCustomerType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddCustomerType.ImageOptions.SvgImageSize = new System.Drawing.Size(32, 32);
-            this.btnAddCustomerType.Location = new System.Drawing.Point(5, 372);
+            this.btnAddCustomerType.Location = new System.Drawing.Point(502, 54);
             this.btnAddCustomerType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCustomerType.Name = "btnAddCustomerType";
             this.btnAddCustomerType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnAddCustomerType.Size = new System.Drawing.Size(142, 41);
+            this.btnAddCustomerType.Size = new System.Drawing.Size(141, 41);
             this.btnAddCustomerType.TabIndex = 4;
             this.btnAddCustomerType.Text = "THÊM LOẠI KHÁCH";
             this.btnAddCustomerType.Click += new System.EventHandler(this.btnAddCustomerType_Click);
@@ -2153,6 +2136,8 @@
             // 
             this.dgvCustomerType.AllowUserToAddRows = false;
             this.dgvCustomerType.AllowUserToDeleteRows = false;
+            this.dgvCustomerType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvCustomerType.BackgroundColor = System.Drawing.Color.White;
             this.dgvCustomerType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomerType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2165,7 +2150,7 @@
             this.dgvCustomerType.ReadOnly = true;
             this.dgvCustomerType.RowTemplate.Height = 24;
             this.dgvCustomerType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCustomerType.Size = new System.Drawing.Size(449, 343);
+            this.dgvCustomerType.Size = new System.Drawing.Size(449, 284);
             this.dgvCustomerType.TabIndex = 1;
             this.dgvCustomerType.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
             // 
@@ -2195,31 +2180,15 @@
             // 
             // gcRoomTypeList
             // 
-            this.gcRoomTypeList.Controls.Add(this.btnEditRoomType);
             this.gcRoomTypeList.Controls.Add(this.btnDelRoomType);
+            this.gcRoomTypeList.Controls.Add(this.btnEditRoomType);
             this.gcRoomTypeList.Controls.Add(this.btnAddRoomType);
             this.gcRoomTypeList.Controls.Add(this.dgvRoomType);
-            this.gcRoomTypeList.Location = new System.Drawing.Point(3, 221);
+            this.gcRoomTypeList.Location = new System.Drawing.Point(243, 322);
             this.gcRoomTypeList.Name = "gcRoomTypeList";
-            this.gcRoomTypeList.Size = new System.Drawing.Size(460, 417);
+            this.gcRoomTypeList.Size = new System.Drawing.Size(687, 331);
             this.gcRoomTypeList.TabIndex = 1;
             this.gcRoomTypeList.Text = "ĐƠN GIÁ CÁC LOẠI PHÒNG";
-            // 
-            // btnEditRoomType
-            // 
-            this.btnEditRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEditRoomType.Appearance.Options.UseFont = true;
-            this.btnEditRoomType.Appearance.Options.UseImage = true;
-            this.btnEditRoomType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnEditRoomType.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_edit;
-            this.btnEditRoomType.Location = new System.Drawing.Point(306, 372);
-            this.btnEditRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEditRoomType.Name = "btnEditRoomType";
-            this.btnEditRoomType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnEditRoomType.Size = new System.Drawing.Size(146, 41);
-            this.btnEditRoomType.TabIndex = 5;
-            this.btnEditRoomType.Text = "SỬA LOẠI PHÒNG";
-            this.btnEditRoomType.Click += new System.EventHandler(this.btnEditRoomType_Click);
             // 
             // btnDelRoomType
             // 
@@ -2228,14 +2197,29 @@
             this.btnDelRoomType.Appearance.Options.UseImage = true;
             this.btnDelRoomType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnDelRoomType.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_trash;
-            this.btnDelRoomType.Location = new System.Drawing.Point(156, 372);
+            this.btnDelRoomType.Location = new System.Drawing.Point(500, 176);
             this.btnDelRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelRoomType.Name = "btnDelRoomType";
             this.btnDelRoomType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnDelRoomType.Size = new System.Drawing.Size(143, 41);
-            this.btnDelRoomType.TabIndex = 4;
+            this.btnDelRoomType.TabIndex = 6;
             this.btnDelRoomType.Text = "XOÁ LOẠI PHÒNG";
-            this.btnDelRoomType.Click += new System.EventHandler(this.btnDelRoomType_Click);
+            // 
+            // btnEditRoomType
+            // 
+            this.btnEditRoomType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEditRoomType.Appearance.Options.UseFont = true;
+            this.btnEditRoomType.Appearance.Options.UseImage = true;
+            this.btnEditRoomType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnEditRoomType.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_edit;
+            this.btnEditRoomType.Location = new System.Drawing.Point(499, 123);
+            this.btnEditRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditRoomType.Name = "btnEditRoomType";
+            this.btnEditRoomType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnEditRoomType.Size = new System.Drawing.Size(146, 41);
+            this.btnEditRoomType.TabIndex = 5;
+            this.btnEditRoomType.Text = "SỬA LOẠI PHÒNG";
+            this.btnEditRoomType.Click += new System.EventHandler(this.btnEditRoomType_Click);
             // 
             // btnAddRoomType
             // 
@@ -2244,7 +2228,7 @@
             this.btnAddRoomType.Appearance.Options.UseImage = true;
             this.btnAddRoomType.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnAddRoomType.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.actions_addcircled;
-            this.btnAddRoomType.Location = new System.Drawing.Point(5, 372);
+            this.btnAddRoomType.Location = new System.Drawing.Point(497, 70);
             this.btnAddRoomType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddRoomType.Name = "btnAddRoomType";
             this.btnAddRoomType.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -2257,6 +2241,8 @@
             // 
             this.dgvRoomType.AllowUserToAddRows = false;
             this.dgvRoomType.AllowUserToDeleteRows = false;
+            this.dgvRoomType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvRoomType.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoomType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoomType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2268,7 +2254,7 @@
             this.dgvRoomType.ReadOnly = true;
             this.dgvRoomType.RowTemplate.Height = 24;
             this.dgvRoomType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoomType.Size = new System.Drawing.Size(450, 343);
+            this.dgvRoomType.Size = new System.Drawing.Size(450, 302);
             this.dgvRoomType.TabIndex = 1;
             this.dgvRoomType.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
             // 
@@ -2296,19 +2282,18 @@
             this.gcEditRule.Controls.Add(this.btnEditMaxCustomerRule);
             this.gcEditRule.Controls.Add(this.lbAdditionalCustomerSurcharge);
             this.gcEditRule.Controls.Add(this.lbMaxCustomerRule);
-            this.gcEditRule.Location = new System.Drawing.Point(3, 27);
+            this.gcEditRule.Location = new System.Drawing.Point(3, 3);
             this.gcEditRule.Name = "gcEditRule";
-            this.gcEditRule.Size = new System.Drawing.Size(926, 188);
+            this.gcEditRule.Size = new System.Drawing.Size(235, 650);
             this.gcEditRule.TabIndex = 0;
             this.gcEditRule.Text = "THAY ĐỔI QUY ĐỊNH";
             // 
             // lbAdditionalCustomerSurchargeValue
             // 
-            this.lbAdditionalCustomerSurchargeValue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbAdditionalCustomerSurchargeValue.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbAdditionalCustomerSurchargeValue.Appearance.Options.UseFont = true;
             this.lbAdditionalCustomerSurchargeValue.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbAdditionalCustomerSurchargeValue.Location = new System.Drawing.Point(457, 85);
+            this.lbAdditionalCustomerSurchargeValue.Location = new System.Drawing.Point(169, 84);
             this.lbAdditionalCustomerSurchargeValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbAdditionalCustomerSurchargeValue.Name = "lbAdditionalCustomerSurchargeValue";
             this.lbAdditionalCustomerSurchargeValue.Size = new System.Drawing.Size(5, 13);
@@ -2317,11 +2302,10 @@
             // 
             // lbMaxCustomerValue
             // 
-            this.lbMaxCustomerValue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMaxCustomerValue.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbMaxCustomerValue.Appearance.Options.UseFont = true;
             this.lbMaxCustomerValue.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbMaxCustomerValue.Location = new System.Drawing.Point(457, 43);
+            this.lbMaxCustomerValue.Location = new System.Drawing.Point(169, 54);
             this.lbMaxCustomerValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbMaxCustomerValue.Name = "lbMaxCustomerValue";
             this.lbMaxCustomerValue.Size = new System.Drawing.Size(5, 13);
@@ -2330,11 +2314,10 @@
             // 
             // btnAdditionalCustomerSurcharge
             // 
-            this.btnAdditionalCustomerSurcharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdditionalCustomerSurcharge.Appearance.Options.UseImage = true;
             this.btnAdditionalCustomerSurcharge.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.edit_16x161;
             this.btnAdditionalCustomerSurcharge.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnAdditionalCustomerSurcharge.Location = new System.Drawing.Point(479, 79);
+            this.btnAdditionalCustomerSurcharge.Location = new System.Drawing.Point(191, 78);
             this.btnAdditionalCustomerSurcharge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdditionalCustomerSurcharge.Name = "btnAdditionalCustomerSurcharge";
             this.btnAdditionalCustomerSurcharge.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -2344,11 +2327,10 @@
             // 
             // btnEditMaxCustomerRule
             // 
-            this.btnEditMaxCustomerRule.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEditMaxCustomerRule.Appearance.Options.UseImage = true;
             this.btnEditMaxCustomerRule.ImageOptions.Image = global::GUI_QuanLy.Properties.Resources.edit_16x16;
             this.btnEditMaxCustomerRule.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnEditMaxCustomerRule.Location = new System.Drawing.Point(479, 37);
+            this.btnEditMaxCustomerRule.Location = new System.Drawing.Point(191, 48);
             this.btnEditMaxCustomerRule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditMaxCustomerRule.Name = "btnEditMaxCustomerRule";
             this.btnEditMaxCustomerRule.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -2358,11 +2340,10 @@
             // 
             // lbAdditionalCustomerSurcharge
             // 
-            this.lbAdditionalCustomerSurcharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbAdditionalCustomerSurcharge.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbAdditionalCustomerSurcharge.Appearance.Options.UseFont = true;
             this.lbAdditionalCustomerSurcharge.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbAdditionalCustomerSurcharge.Location = new System.Drawing.Point(296, 85);
+            this.lbAdditionalCustomerSurcharge.Location = new System.Drawing.Point(8, 84);
             this.lbAdditionalCustomerSurcharge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbAdditionalCustomerSurcharge.Name = "lbAdditionalCustomerSurcharge";
             this.lbAdditionalCustomerSurcharge.Size = new System.Drawing.Size(149, 13);
@@ -2371,11 +2352,10 @@
             // 
             // lbMaxCustomerRule
             // 
-            this.lbMaxCustomerRule.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbMaxCustomerRule.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lbMaxCustomerRule.Appearance.Options.UseFont = true;
             this.lbMaxCustomerRule.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.lbMaxCustomerRule.Location = new System.Drawing.Point(296, 43);
+            this.lbMaxCustomerRule.Location = new System.Drawing.Point(8, 54);
             this.lbMaxCustomerRule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbMaxCustomerRule.Name = "lbMaxCustomerRule";
             this.lbMaxCustomerRule.Size = new System.Drawing.Size(155, 13);
@@ -2384,10 +2364,13 @@
             // 
             // MainForm
             // 
+            this.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 693);
             this.Controls.Add(this.tcHotelManagement);
+            this.IconOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_hotel_24;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ KHÁCH SẠN";
@@ -2585,11 +2568,9 @@
         private DevExpress.XtraEditors.GroupControl gcCustomerTypeList;
         private DevExpress.XtraEditors.GroupControl gcRoomTypeList;
         private DevExpress.XtraEditors.SimpleButton btnEditCustomerType;
-        private DevExpress.XtraEditors.SimpleButton btnDelCustomerType;
         private DevExpress.XtraEditors.SimpleButton btnAddCustomerType;
         private System.Windows.Forms.DataGridView dgvCustomerType;
         private DevExpress.XtraEditors.SimpleButton btnEditRoomType;
-        private DevExpress.XtraEditors.SimpleButton btnDelRoomType;
         private DevExpress.XtraEditors.SimpleButton btnAddRoomType;
         private System.Windows.Forms.DataGridView dgvRoomType;
         private System.Windows.Forms.DataGridViewTextBoxColumn EditRoomTypeID;
@@ -2651,8 +2632,9 @@
         private DevExpress.XtraEditors.SimpleButton btnCreateBillRoom;
         private System.Windows.Forms.Panel panel4;
         private DevExpress.XtraEditors.SimpleButton btnOutPDF;
-        private DevExpress.XtraEditors.SimpleButton btnOutExcel;
         private System.Windows.Forms.ComboBox cbCustumerList;
+        private DevExpress.XtraEditors.SimpleButton btnDelCustomerType;
+        private DevExpress.XtraEditors.SimpleButton btnDelRoomType;
     }
 }
 

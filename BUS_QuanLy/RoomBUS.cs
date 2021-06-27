@@ -55,5 +55,9 @@ namespace BUS_QuanLy
         {
             return RoomDAO.UpdateMaxCustomerInRoom(num);
         }
+        public static DataTable GetDataForReportByMonth(string month,string year)
+        {
+            return RoomDAO.GetDataForReportByMonth(month, year);
+        }
     }
 }

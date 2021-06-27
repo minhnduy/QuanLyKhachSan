@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomLeaseForm));
             this.imgEditRoom = new DevExpress.XtraEditors.LabelControl();
             this.lbRoomDetailHeader = new DevExpress.XtraEditors.LabelControl();
             this.lbRoomID = new DevExpress.XtraEditors.LabelControl();
@@ -295,6 +296,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(746, 507);
             this.MinimumSize = new System.Drawing.Size(746, 507);
             this.Name = "RoomLeaseForm";
