@@ -9,6 +9,6 @@
 ## I. Giới thiệu.
     Phần mềm quản lý khách sạn( administrator)
     Quản lý khách sạn/ nhà nghỉ: Phòng, hoá đơn, Thuê phòng, Vật tư, Doanh thu...
-    Phần mềm sử dụng framework [DevExpress]:https://www.devexpress.com/ cho giao diện
+    Phần mềm sử dụng framework [DevExpress](https://www.devexpress.com/) cho giao diện
 ## Chuẩn bị môi trường
 ### 1. 
