@@ -894,6 +894,7 @@ namespace GUI_QuanLy
 
         public void cbCustomerListLoad()
         {
+            this.cbCustumerList.DataBindings.Clear();
             this.cbCustumerList.Enabled = true;
             DataTable dt = RoomDetailBUS.GetListCustomer();
             if (dt.Rows.Count!=0)
@@ -1306,6 +1307,5 @@ namespace GUI_QuanLy
                 this.cbCustomerListLoad();
             }
         }
-
     }
 }

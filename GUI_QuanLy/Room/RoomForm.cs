@@ -51,7 +51,7 @@ namespace GUI_QuanLy.Room
                     {
                         this.lbRoomHeader.Text = this.Text = "THÊM THÔNG TIN PHÒNG";
                         this.cbRoomType.SelectedIndex = 0;
-                        this.cbRoomStatus.SelectedIndex = 0;
+                        this.cbRoomStatus.SelectedIndex = 2;
                         break;
                     }
 

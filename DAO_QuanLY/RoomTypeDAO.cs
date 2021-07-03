@@ -20,7 +20,7 @@ namespace DAO_QuanLY
                     connection.Open();
                 }
 
-                var query = "SELECT MaLoaiPhong, DonGia FROM LOAIPHONG";
+                var query = "SELECT MaLoaiPhong, DonGia FROM LOAIPHONG WHERE isDelete <> 1";
                 var command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
 
@@ -231,7 +231,7 @@ namespace DAO_QuanLY
                     connection.Open();
                 }
 
-                var query = $"DELETE LoaiPhong WHERE MaLoaiPhong = '{roomTypeID}'";
+                var query = $"UPDATE LoaiPhong SET isDelete=1 WHERE MaLoaiPhong = '{roomTypeID}'";
                 var command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
                 return true;

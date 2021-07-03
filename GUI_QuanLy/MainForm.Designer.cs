@@ -159,8 +159,8 @@
             this.btnAddBillRoom = new DevExpress.XtraEditors.SimpleButton();
             this.cbAddBillRoomID = new System.Windows.Forms.ComboBox();
             this.lbAddBillRoomID = new DevExpress.XtraEditors.LabelControl();
-            this.btnCancelBillRoom = new DevExpress.XtraEditors.SimpleButton();
             this.btnCreateBillRoom = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelBillRoom = new DevExpress.XtraEditors.SimpleButton();
             this.tabMonthReport = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.gcMonthReportSelect = new DevExpress.XtraEditors.GroupControl();
@@ -333,7 +333,7 @@
             this.gcRoomData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoomData.Location = new System.Drawing.Point(3, 3);
             this.gcRoomData.Name = "gcRoomData";
-            this.gcRoomData.Size = new System.Drawing.Size(728, 214);
+            this.gcRoomData.Size = new System.Drawing.Size(728, 158);
             this.gcRoomData.TabIndex = 0;
             this.gcRoomData.Text = "THÔNG TIN PHÒNG";
             // 
@@ -433,9 +433,9 @@
             this.tableLayoutPanel2.SetColumnSpan(this.gcListRoom, 2);
             this.gcListRoom.Controls.Add(this.dgvListRoom);
             this.gcListRoom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcListRoom.Location = new System.Drawing.Point(3, 223);
+            this.gcListRoom.Location = new System.Drawing.Point(3, 167);
             this.gcListRoom.Name = "gcListRoom";
-            this.gcListRoom.Size = new System.Drawing.Size(928, 431);
+            this.gcListRoom.Size = new System.Drawing.Size(928, 487);
             this.gcListRoom.TabIndex = 2;
             this.gcListRoom.Text = "DANH MỤC PHÒNG";
             // 
@@ -460,7 +460,7 @@
             this.dgvListRoom.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvListRoom.RowTemplate.Height = 24;
             this.dgvListRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListRoom.Size = new System.Drawing.Size(924, 406);
+            this.dgvListRoom.Size = new System.Drawing.Size(924, 462);
             this.dgvListRoom.TabIndex = 2;
             this.dgvListRoom.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvListRoom_CellEnter);
             this.dgvListRoom.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView_RowPostPaint);
@@ -516,7 +516,7 @@
             this.gcRoomEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcRoomEdit.Location = new System.Drawing.Point(737, 3);
             this.gcRoomEdit.Name = "gcRoomEdit";
-            this.gcRoomEdit.Size = new System.Drawing.Size(194, 214);
+            this.gcRoomEdit.Size = new System.Drawing.Size(194, 158);
             this.gcRoomEdit.TabIndex = 1;
             this.gcRoomEdit.Text = "HIỆU CHỈNH PHÒNG";
             // 
@@ -1436,7 +1436,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.46091F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.53909F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
             this.tableLayoutPanel4.Controls.Add(this.gcRoomBill, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.gcBill, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.gcRoomBillData, 1, 0);
@@ -1553,7 +1553,7 @@
             this.gcBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcBill.Location = new System.Drawing.Point(3, 3);
             this.gcBill.Name = "gcBill";
-            this.gcBill.Size = new System.Drawing.Size(352, 158);
+            this.gcBill.Size = new System.Drawing.Size(351, 158);
             this.gcBill.TabIndex = 0;
             this.gcBill.Text = "THÔNG TIN THANH TOÁN";
             // 
@@ -1670,9 +1670,9 @@
             this.gcRoomBillData.Controls.Add(this.lbBillRoomDay);
             this.gcRoomBillData.Controls.Add(this.lbBillRoomID);
             this.gcRoomBillData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcRoomBillData.Location = new System.Drawing.Point(361, 3);
+            this.gcRoomBillData.Location = new System.Drawing.Point(360, 3);
             this.gcRoomBillData.Name = "gcRoomBillData";
-            this.gcRoomBillData.Size = new System.Drawing.Size(360, 158);
+            this.gcRoomBillData.Size = new System.Drawing.Size(358, 158);
             this.gcRoomBillData.TabIndex = 1;
             this.gcRoomBillData.Text = "THÔNG TIN PHÒNG";
             // 
@@ -1784,9 +1784,9 @@
             this.gcAddRoomBill.Controls.Add(this.cbAddBillRoomID);
             this.gcAddRoomBill.Controls.Add(this.lbAddBillRoomID);
             this.gcAddRoomBill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcAddRoomBill.Location = new System.Drawing.Point(727, 3);
+            this.gcAddRoomBill.Location = new System.Drawing.Point(724, 3);
             this.gcAddRoomBill.Name = "gcAddRoomBill";
-            this.gcAddRoomBill.Size = new System.Drawing.Size(204, 158);
+            this.gcAddRoomBill.Size = new System.Drawing.Size(207, 158);
             this.gcAddRoomBill.TabIndex = 2;
             this.gcAddRoomBill.Text = "THÊM PHÒNG TRẢ";
             // 
@@ -1829,23 +1829,6 @@
             this.lbAddBillRoomID.TabIndex = 22;
             this.lbAddBillRoomID.Text = "CHỌN PHÒNG:";
             // 
-            // btnCancelBillRoom
-            // 
-            this.btnCancelBillRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnCancelBillRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnCancelBillRoom.Appearance.Options.UseFont = true;
-            this.btnCancelBillRoom.Enabled = false;
-            this.btnCancelBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnCancelBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.removegroupheader;
-            this.btnCancelBillRoom.Location = new System.Drawing.Point(727, 616);
-            this.btnCancelBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCancelBillRoom.Name = "btnCancelBillRoom";
-            this.btnCancelBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnCancelBillRoom.Size = new System.Drawing.Size(160, 35);
-            this.btnCancelBillRoom.TabIndex = 16;
-            this.btnCancelBillRoom.Text = "HUỶ HOÁ ĐƠN";
-            this.btnCancelBillRoom.Click += new System.EventHandler(this.btnCancelBillRoom_Click);
-            // 
             // btnCreateBillRoom
             // 
             this.btnCreateBillRoom.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -1854,7 +1837,7 @@
             this.btnCreateBillRoom.Enabled = false;
             this.btnCreateBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnCreateBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.insertgroupheader;
-            this.btnCreateBillRoom.Location = new System.Drawing.Point(561, 616);
+            this.btnCreateBillRoom.Location = new System.Drawing.Point(558, 616);
             this.btnCreateBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateBillRoom.Name = "btnCreateBillRoom";
             this.btnCreateBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -1862,6 +1845,23 @@
             this.btnCreateBillRoom.TabIndex = 28;
             this.btnCreateBillRoom.Text = "LẬP HOÁ ĐƠN";
             this.btnCreateBillRoom.Click += new System.EventHandler(this.btnCreateBillRoom_Click);
+            // 
+            // btnCancelBillRoom
+            // 
+            this.btnCancelBillRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancelBillRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancelBillRoom.Appearance.Options.UseFont = true;
+            this.btnCancelBillRoom.Enabled = false;
+            this.btnCancelBillRoom.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnCancelBillRoom.ImageOptions.SvgImage = global::GUI_QuanLy.Properties.Resources.removegroupheader;
+            this.btnCancelBillRoom.Location = new System.Drawing.Point(724, 616);
+            this.btnCancelBillRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancelBillRoom.Name = "btnCancelBillRoom";
+            this.btnCancelBillRoom.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnCancelBillRoom.Size = new System.Drawing.Size(160, 35);
+            this.btnCancelBillRoom.TabIndex = 16;
+            this.btnCancelBillRoom.Text = "HUỶ HOÁ ĐƠN";
+            this.btnCancelBillRoom.Click += new System.EventHandler(this.btnCancelBillRoom_Click);
             // 
             // tabMonthReport
             // 
@@ -2204,6 +2204,7 @@
             this.btnDelRoomType.Size = new System.Drawing.Size(143, 41);
             this.btnDelRoomType.TabIndex = 6;
             this.btnDelRoomType.Text = "XOÁ LOẠI PHÒNG";
+            this.btnDelRoomType.Click += new System.EventHandler(this.btnDelRoomType_Click);
             // 
             // btnEditRoomType
             // 
@@ -2371,6 +2372,9 @@
             this.ClientSize = new System.Drawing.Size(936, 693);
             this.Controls.Add(this.tcHotelManagement);
             this.IconOptions.Image = global::GUI_QuanLy.Properties.Resources.icons8_hotel_24;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(938, 725);
+            this.MinimumSize = new System.Drawing.Size(938, 725);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QUẢN LÝ KHÁCH SẠN";

@@ -10,6 +10,8 @@ namespace DAO_QuanLY
     public class DBconnection
     {
         protected static SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-LCECD2C;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+        //protected static SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-FL56Q9F;Initial Catalog=QuanLyKhachSan;Integrated Security=True");
+
     }
 
 }
