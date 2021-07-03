@@ -13,8 +13,9 @@
 ## Chuẩn bị môi trường
 ### 1. Restore Database 
         Sửa dụng sql Server 2019 
-        Tiến hành restore [database]() 
+        Tiến hành restore [database](https://github.com/minhnduy/QuanLyKhachSan/blob/master/Database/QLKS.bak) 
         Thay đổi connectionString
 ### 2. Tải bộ framework DevExpress
         Download and Install [DevExpress](https://www.devexpress.com/Products/Try) 
-        ![image](https://user-images.githubusercontent.com/45306270/124341894-0523e200-dbea-11eb-89d0-f722ad741364.png)
+        <img src="https://user-images.githubusercontent.com/45306270/124341894-0523e200-dbea-11eb-89d0-f722ad741364.png">
+        [Github](https://github.com)
